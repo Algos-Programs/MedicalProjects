@@ -28,6 +28,9 @@
 		A980371217458D3100F808C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
 		A980371A17458D3100F808C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A980371817458D3100F808C3 /* InfoPlist.strings */; };
 		A980371D17458D3100F808C3 /* MedicalProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A980371C17458D3100F808C3 /* MedicalProjectsTests.m */; };
+		A980372917458D5B00F808C3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
+		A980372B17458DBA00F808C3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A980372E1745909000F808C3 /* TestDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372D1745909000F808C3 /* TestDatabase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,11 @@
 		A980371917458D3100F808C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A980371B17458D3100F808C3 /* MedicalProjectsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicalProjectsTests.h; sourceTree = "<group>"; };
 		A980371C17458D3100F808C3 /* MedicalProjectsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicalProjectsTests.m; sourceTree = "<group>"; };
+		A980372717458D5B00F808C3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		A980372817458D5B00F808C3 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A980372C1745909000F808C3 /* TestDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDatabase.h; sourceTree = "<group>"; };
+		A980372D1745909000F808C3 /* TestDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDatabase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A980372B17458DBA00F808C3 /* libsqlite3.0.dylib in Frameworks */,
 				A98036E117458D3100F808C3 /* UIKit.framework in Frameworks */,
 				A98036E317458D3100F808C3 /* Foundation.framework in Frameworks */,
 				A98036E517458D3100F808C3 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +107,7 @@
 		A98036D417458D3100F808C3 = {
 			isa = PBXGroup;
 			children = (
+				A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */,
 				A98036E617458D3100F808C3 /* MedicalProjects */,
 				A980371517458D3100F808C3 /* MedicalProjectsTests */,
 				A98036DF17458D3100F808C3 /* Frameworks */,
@@ -128,6 +138,7 @@
 		A98036E617458D3100F808C3 /* MedicalProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A980372617458D4700F808C3 /* Database */,
 				A98036EF17458D3100F808C3 /* AppDelegate.h */,
 				A98036F017458D3100F808C3 /* AppDelegate.m */,
 				A98036F817458D3100F808C3 /* MainStoryboard.storyboard */,
@@ -175,6 +186,17 @@
 				A980371817458D3100F808C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A980372617458D4700F808C3 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A980372717458D5B00F808C3 /* Database.h */,
+				A980372817458D5B00F808C3 /* Database.m */,
+				A980372C1745909000F808C3 /* TestDatabase.h */,
+				A980372D1745909000F808C3 /* TestDatabase.m */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +317,7 @@
 				A98036F117458D3100F808C3 /* AppDelegate.m in Sources */,
 				A98036FD17458D3100F808C3 /* FirstViewController.m in Sources */,
 				A980370417458D3100F808C3 /* SecondViewController.m in Sources */,
+				A980372917458D5B00F808C3 /* Database.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A980371D17458D3100F808C3 /* MedicalProjectsTests.m in Sources */,
+				A980372E1745909000F808C3 /* TestDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
