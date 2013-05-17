@@ -38,9 +38,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 #pragma mark - Creazione Tabelle
 //************************************
 
-/**
- Crea tablella dei PESI
- */
+/// Crea tablella dei PESI
 - (BOOL)createTableWeight {
     [self openDB];
     char *err;
@@ -58,9 +56,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return true;
 }
 
-/**
- Crea tablella della PRESSIONE
- */
+/// Crea tablella della PRESSIONE
 - (BOOL)createTablePressure {
     char *err;
     NSString *query = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
@@ -79,9 +75,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return true;
 }
 
-/**
- Crea tablella della GLICEMIA
- */
+/// Crea tablella della GLICEMIA
 - (BOOL)createTableGlicosic {
     char *err;
     NSString *query = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
@@ -105,6 +99,9 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 #pragma mark - Inserimento Record
 //************************************
 
+/**
+    
+ */
 - (BOOL)insertWeight:(double)weight withData:(double)date {
     int countOfDb = 0;
     [self openDB];
@@ -199,7 +196,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 }
 
 //************************************
-#pragma mark - Delete Methods
+#pragma mark - Delete Table Methods
 //************************************
 
 - (BOOL)deleteTableWeights {
@@ -227,4 +224,56 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return TRUE;
 }
 
+//************************************
+#pragma mark - Delete record Method
+//************************************
+
+- (BOOL)deleteRowFromWeightWithIndex:(int)index {
+    return [self deleteRowFromTableNamed:TABLE_NAME_WEIGHTS withId:index];
+}
+
+- (BOOL)deleteRowFromGliocosicWithIndex:(int)index{
+    return [self deleteRowFromTableNamed:TABLE_NAME_GLIOCOSIC withId:index];
+}
+
+- (BOOL)deleteRowFromPressuresWithIndex:(int)index {
+    return [self deleteRowFromTableNamed:TABLE_NAME_PRESSURES withId:index];
+}
+
+
+- (BOOL)deleteRowFromTableNamed:(NSString *)tableName withId:(int)index {
+    NSString *str = [tableName stringByAppendingFormat:@".id"];
+    NSString * query = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = %i", tableName, str, index];
+    sqlite3_stmt *compiledStatement;
+    char *err;
+    if (sqlite3_exec(db, [query UTF8String], nil, &compiledStatement, &err) != SQLITE_OK) {
+        
+        sqlite3_close(db);
+        NSLog(@"****** Error Delete Record. '%s'", err);
+        return FALSE;
+    }
+    return TRUE;
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

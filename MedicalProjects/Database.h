@@ -28,6 +28,7 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 
 - (BOOL)deleteTableNamed:(NSString *)tableName; 
 - (int)countOfDbFromTableNamed:(NSString *)tableName;
+- (BOOL)deleteRowFromTableNamed:(NSString *)tableName withId:(int)index;
 
 @end
 
@@ -51,5 +52,9 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 - (BOOL)deleteTableWeights;
 - (BOOL)deleteTableGliocosic;
 - (BOOL)deleteTablePressure;
+
+- (BOOL)deleteRowFromWeightWithIndex:(int)index;
+- (BOOL)deleteRowFromGliocosicWithIndex:(int)index;
+- (BOOL)deleteRowFromPressuresWithIndex:(int)index;
 
 @end
