@@ -33,4 +33,13 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 - (BOOL)createTableWeight;
 - (BOOL)createTablePressure;
 - (BOOL)createTableGlicosic;
+
+- (BOOL)insertWeight:(double)weight withData:(double)date;
+
+- (int)countOfDbFromWeights;
+- (int)countOfDbFromTableNamed:(NSString *)tableName;
+
+- (BOOL)deleteTableWeights;
+- (BOOL)deleteTableNamed:(NSString *)tableName;
+
 @end
