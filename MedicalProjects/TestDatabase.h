@@ -7,7 +7,8 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "Database.h"
 
-@interface TestDatabase : SenTestCase
+@interface TestDatabase : SenTestCase 
 
 @end

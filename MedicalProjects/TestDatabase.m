@@ -17,6 +17,7 @@ Database *db;
     db = [[Database alloc] init];
 }
 
+
 - (void)testCreateTableWeight {
     BOOL createTable = [db createTableWeight];
     NSAssert(createTable, @"Impossibile creare tablella Pesi.");
@@ -32,10 +33,38 @@ Database *db;
     NSAssert(createTable, @"Impossibile creare tablella Glicemia.");
 }
 
+
 - (void)testInsertWeigh {
     BOOL returnValue = [db insertWeight:12.0 withData:928324];
     NSAssert(returnValue, @"Fallito inserimento peso.");
+    
+    //-- Senza Tabella.
+    [db deleteTableWeights];
+    BOOL returnValue1 = [db insertWeight:4324 withData:34];
+    NSAssert(returnValue1, @"Fallito inserimento peso 1");
 }
+
+- (void)testInsertGlicoic {
+    BOOL returnValue = [db insertGlicoicWithBasale:3424 withPrepardiale:342 withPostPrandiale:34234 withDate:3e34];
+    NSAssert(returnValue, @"Fallito inserimento glicemia");
+    
+    //-- Senza Tabella
+    [db deleteTableGliocosic];
+    BOOL returnValue1 = [db insertWeight:4324 withData:34];
+    NSAssert(returnValue1, @"Fallito inserimento peso 1");
+}
+
+- (void)testInsertPressure {
+    BOOL returnValue = [db insertPressreWithPressMax:324324 withPresMin:3423 withDate:432432];
+    NSAssert(returnValue, @"Fallito inserimento glicemia");
+    
+    //-- Senza Tabella
+    [db deleteTablePressure];
+    BOOL returnValue1 = [db insertPressreWithPressMax:324324 withPresMin:3423 withDate:432432];
+    NSAssert(returnValue1, @"Fallito inserimento peso 1");
+
+}
+
 
 - (void)testCountDb {
     //-- Tabella Vuota
@@ -54,14 +83,26 @@ Database *db;
     NSAssert(count2 == 0, @"Count DB Falied");
 }
 
-- (void)testDeleteTable {
+
+- (void)testDeleteTableWeights {
     BOOL returnValue = [db deleteTableWeights];
     NSAssert(returnValue, @"Fallita calcellazione table Weighs");
     
-    
     //-- Senza Tabella
     BOOL returnValue1 = [db deleteTableWeights];
+    NSAssert(!returnValue1, @"Fallita calcellazione table Weighs");    
+}
+
+- (void)testDeleteTableGliocosic {
+    
+    BOOL returnValue = [db deleteTableGliocosic];
+    NSAssert(returnValue, @"Fallita calcellazione table Weighs");
+    
+    //-- Senza Tabella
+    BOOL returnValue1 = [db deleteTableGliocosic];
     NSAssert(!returnValue1, @"Fallita calcellazione table Weighs");
 
 }
+
+
 @end

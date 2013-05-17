@@ -24,6 +24,12 @@ static NSString * const KEY_GLI_BASALE = @"Glic_Basale"; //Glicemia Basale - Lon
 static NSString * const KEY_GLI_PREPRANDIALE = @"Glic_Prepandiale"; //Glicemia Prepandiale - Prima dei pasti.
 static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemia Postprandiale - Dopo dai pasti.
 
+@protocol specipsDatabase <NSObject>
+
+- (BOOL)deleteTableNamed:(NSString *)tableName; 
+- (int)countOfDbFromTableNamed:(NSString *)tableName;
+
+@end
 
 @interface Database : NSObject {
     
@@ -35,11 +41,15 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 - (BOOL)createTableGlicosic;
 
 - (BOOL)insertWeight:(double)weight withData:(double)date;
+- (BOOL)insertGlicoicWithBasale:(double)basale withPrepardiale:(double)prepard withPostPrandiale:(double)post withDate:(double)date;
+- (BOOL)insertPressreWithPressMax:(double)max withPresMin:(double)pressMin withDate:(double)date;
 
 - (int)countOfDbFromWeights;
-- (int)countOfDbFromTableNamed:(NSString *)tableName;
+- (int)countOfDbFromGliocosic;
+- (int)countOfDbFromPressures;
 
 - (BOOL)deleteTableWeights;
-- (BOOL)deleteTableNamed:(NSString *)tableName;
+- (BOOL)deleteTableGliocosic;
+- (BOOL)deleteTablePressure;
 
 @end

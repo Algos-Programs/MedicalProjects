@@ -123,6 +123,44 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return TRUE;
 }
 
+- (BOOL)insertGlicoicWithBasale:(double)basale withPrepardiale:(double)prepard withPostPrandiale:(double)post withDate:(double)date {
+    int countOfDb = 0;
+    [self openDB];
+    countOfDb = [self countOfDbFromGliocosic] + 1;
+    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@','%@','%@')"
+                     "VALUES ('%d','%f','%f','%f','%f')", TABLE_NAME_GLIOCOSIC, @"id",KEY_DATA, KEY_GLI_BASALE, KEY_GLI_PREPRANDIALE, KEY_GLI_POSTPRANDIALE, countOfDb, date, basale, prepard, post];
+    
+    
+    char *err;
+    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+        
+        sqlite3_close(db);
+        NSLog(@"****** Not Posssible Insert New Record In %@, with error: '%s'", TABLE_NAME_WEIGHTS,err);
+        return FALSE;
+    }
+    return TRUE;
+
+}
+
+- (BOOL)insertPressreWithPressMax:(double)pressMax withPresMin:(double)pressMin withDate:(double)date {
+    int countOfDb = 0;
+    [self openDB];
+    countOfDb = [self countOfDbFromPressures] + 1;
+    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@','%@')"
+                     "VALUES ('%d','%f','%f','%f')", TABLE_NAME_PRESSURES, @"id",KEY_DATA, KEY_PRE_MAX, KEY_PRE_MIN, countOfDb, date, pressMax, pressMin];
+    
+    
+    char *err;
+    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+        
+        sqlite3_close(db);
+        NSLog(@"****** Not Posssible Insert New Record In %@, with error: '%s'", TABLE_NAME_PRESSURES,err);
+        return FALSE;
+    }
+    return TRUE;
+
+}
+
 //************************************
 #pragma mark - Count 
 //************************************
@@ -130,6 +168,16 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 - (int)countOfDbFromWeights {
     [self createTableWeight];
     return [self countOfDbFromTableNamed:TABLE_NAME_WEIGHTS];
+}
+
+- (int)countOfDbFromGliocosic {
+    [self createTableGlicosic];
+    return [self countOfDbFromTableNamed:TABLE_NAME_GLIOCOSIC];
+}
+
+- (int)countOfDbFromPressures {
+    [self createTablePressure];
+    return [self countOfDbFromTableNamed:TABLE_NAME_PRESSURES];
 }
 
 - (int)countOfDbFromTableNamed:(NSString *)tableName {
@@ -151,11 +199,19 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 }
 
 //************************************
-#pragma mark - Delete Table
+#pragma mark - Delete Methods
 //************************************
 
 - (BOOL)deleteTableWeights {
     return [self deleteTableNamed:TABLE_NAME_WEIGHTS];
+}
+
+- (BOOL)deleteTableGliocosic {
+    return [self deleteTableNamed:TABLE_NAME_GLIOCOSIC];
+}
+
+- (BOOL)deleteTablePressure {
+    return [self deleteTableNamed:TABLE_NAME_PRESSURES];
 }
 
 - (BOOL)deleteTableNamed:(NSString *)tableName {
