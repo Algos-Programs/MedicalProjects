@@ -182,4 +182,86 @@ Database *db;
     NSAssert(!returnValue2, @"2 - Impossibile cancellare elemento dalla tavola Weights");
 
 }
+
+
+- (void)testObjectsFromWeights {
+    [db createTableWeight];
+    [db insertWeight:3242 withData:765];
+    NSArray *array = [db objectsFromWeight];
+    NSAssert(array.count == 1, @"1 - Valori non presi dal DB");
+    
+    NSDictionary *dic = [array objectAtIndex:0];
+    int index = [[dic valueForKey:@"id"] intValue];
+    NSAssert(index == 1, @"2 - Index differente - %i", index);
+    
+    double weight = [[dic valueForKey:KEY_WEIGHT] doubleValue];
+    NSAssert(weight == 3242, @"3 - weight %f != 324", weight);
+
+    double data = [[dic valueForKey:KEY_DATA] doubleValue];
+    NSAssert(data == 765, @"5 - data %f != 342", data);
+}
+
+- (void)testObjectsFromPressures {
+    [db createTablePressure];
+    [db insertPressreWithPressMax:324 withPresMin:3243 withDate:342];
+    NSArray *array = [db objectsFromPressures];
+    NSAssert(array.count == 1, @"1 - Valori non presi dal DB");
+    
+    NSDictionary *dic = [array objectAtIndex:0];
+    int index = [[dic valueForKey:@"id"] intValue];
+    NSAssert(index == 1, @"2 - Index differente - %i", index);
+    
+    double pressMax = [[dic valueForKey:KEY_PRE_MAX] doubleValue];
+    NSAssert(pressMax == 324, @"3 - Press Max %f != 324", pressMax);
+    
+    double pressMin = [[dic valueForKey:KEY_PRE_MIN] doubleValue];
+    NSAssert(pressMin == 3243, @"4 - Press MIn %f != 3243", pressMin);
+    
+    double data = [[dic valueForKey:KEY_DATA] doubleValue];
+    NSAssert(data == 342, @"5 - data %f != 342", data);
+}
+
+- (void)testObjectsFromGliocosic {
+    [db createTableGlicosic];
+    [db insertGlicoicWithBasale:123 withPrepardiale:456 withPostPrandiale:789 withDate:1010];
+    NSArray *array = [db objectsFromGliocosic];
+    NSAssert(array.count == 1, @"1 - Valori non presi dal DB");
+    
+    NSDictionary *dic = [array objectAtIndex:0];
+    int index = [[dic valueForKey:@"id"] intValue];
+    NSAssert(index == 1, @"2 - Index differente - %i", index);
+    
+    double gliBasale = [[dic valueForKey:KEY_GLI_BASALE] doubleValue];
+    NSAssert(gliBasale == 123, @"3 - Gli Basale %f != 123", gliBasale);
+    
+    double gliPrepardiale = [[dic valueForKey:KEY_GLI_PREPRANDIALE] doubleValue];
+    NSAssert(gliPrepardiale == 456, @"4 - Press MIn %f != 456", gliPrepardiale);
+    
+    double gliPostPrandiale = [[dic valueForKey:KEY_GLI_POSTPRANDIALE] doubleValue];
+    NSAssert(gliPostPrandiale == 789, @"4 - Press MIn %f != 789", gliPrepardiale);
+    
+    double data = [[dic valueForKey:KEY_DATA] doubleValue];
+    NSAssert(data == 1010, @"5 - data %f != 1010", data);
+
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -57,4 +57,8 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 - (BOOL)deleteRowFromGliocosicWithIndex:(int)index;
 - (BOOL)deleteRowFromPressuresWithIndex:(int)index;
 
+- (NSArray *)objectsFromWeight;
+- (NSArray *)objectsFromPressures;
+- (NSArray *)objectsFromGliocosic;
+
 @end

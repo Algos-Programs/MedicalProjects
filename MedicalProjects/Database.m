@@ -99,15 +99,12 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 #pragma mark - Inserimento Record
 //************************************
 
-/**
-    
- */
 - (BOOL)insertWeight:(double)weight withData:(double)date {
     int countOfDb = 0;
     [self openDB];
     countOfDb = [self countOfDbFromWeights] + 1;
     NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@')"
-                     "VALUES ('%d','%f','%f')", TABLE_NAME_WEIGHTS, @"id",KEY_DATA, KEY_WEIGHT, countOfDb, weight, date];
+                     "VALUES ('%d','%f','%f')", TABLE_NAME_WEIGHTS, @"id",KEY_DATA, KEY_WEIGHT, countOfDb, date, weight];
     
     
     char *err;
@@ -240,7 +237,6 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return [self deleteRowFromTableNamed:TABLE_NAME_PRESSURES withId:index];
 }
 
-
 - (BOOL)deleteRowFromTableNamed:(NSString *)tableName withId:(int)index {
     NSString *str = [tableName stringByAppendingFormat:@".id"];
     NSString * query = [NSString stringWithFormat:@"DELETE FROM %@ WHERE %@ = %i", tableName, str, index];
@@ -253,6 +249,143 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
         return FALSE;
     }
     return TRUE;
+}
+
+//************************************
+#pragma mark - Get  Method
+//************************************
+
+- (NSArray *)objectsFromWeight {
+    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@ FROM '%@'", KEY_DATA, KEY_WEIGHT, TABLE_NAME_WEIGHTS];
+    sqlite3_stmt *statment;
+    
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    
+    if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statment, nil) == SQLITE_OK) {
+        
+        while (sqlite3_step(statment) == SQLITE_ROW) {
+
+            NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+            NSString *tempString = [[NSString alloc] init];
+            
+            //-- ID
+            int field1 = (int) sqlite3_column_int(statment, 0);
+            tempString = [NSString stringWithFormat:@"%i", field1];
+            [mDic setValue:tempString forKey:@"id"];
+            
+            //-- DATA
+            double field2 = (double) sqlite3_column_double(statment, 1);
+            tempString = [NSString stringWithFormat :@"%f", field2];
+            [mDic setValue:tempString forKey:KEY_DATA];
+            
+            //-- WEIGHT
+            double field3 = (double) sqlite3_column_double(statment, 2);
+            tempString = [NSString stringWithFormat :@"%f", field3];
+            [mDic setValue:tempString forKey:KEY_WEIGHT];
+
+            [returnArray addObject:mDic];
+        }//end while
+        sqlite3_finalize(statment);
+    }//end if
+    else
+        NSLog(@"***** Error do not possible get all pesi");
+
+    return returnArray;
+}
+
+- (NSArray *)objectsFromPressures {
+    
+    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_PRE_MAX, KEY_PRE_MIN, TABLE_NAME_PRESSURES];
+    sqlite3_stmt *statment;
+    
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    
+    if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statment, nil) == SQLITE_OK) {
+        
+        while (sqlite3_step(statment) == SQLITE_ROW) {
+            
+            NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+            NSString *tempString = [[NSString alloc] init];
+            
+            //-- ID
+            int field1 = (int) sqlite3_column_int(statment, 0);
+            tempString = [NSString stringWithFormat:@"%i", field1];
+            [mDic setValue:tempString forKey:@"id"];
+            
+            //-- DATA
+            double field2 = (double) sqlite3_column_double(statment, 1);
+            tempString = [NSString stringWithFormat :@"%f", field2];
+            [mDic setValue:tempString forKey:KEY_DATA];
+            
+            //-- PRESSIONE MAX
+            double field3 = (double) sqlite3_column_double(statment, 2);
+            tempString = [NSString stringWithFormat :@"%f", field3];
+            [mDic setValue:tempString forKey:KEY_PRE_MAX];
+            
+            //-- PRESSIONE MIN
+            double field4 = (double) sqlite3_column_double(statment, 3);
+            tempString = [NSString stringWithFormat :@"%f", field4];
+            [mDic setValue:tempString forKey:KEY_PRE_MIN];
+            
+            
+            [returnArray addObject:mDic];
+        }//end while
+        sqlite3_finalize(statment);
+    }//end if
+    else
+        NSLog(@"***** Error do not possible get all pesi");
+    
+    return returnArray;
+
+}
+
+- (NSArray *)objectsFromGliocosic {
+    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_GLI_BASALE, KEY_GLI_POSTPRANDIALE, KEY_GLI_PREPRANDIALE, TABLE_NAME_GLIOCOSIC];
+    sqlite3_stmt *statment;
+    
+    NSMutableArray *returnArray = [[NSMutableArray alloc] init];
+    
+    if (sqlite3_prepare_v2(db, [qsql UTF8String], -1, &statment, nil) == SQLITE_OK) {
+        
+        while (sqlite3_step(statment) == SQLITE_ROW) {
+            
+            NSMutableDictionary *mDic = [[NSMutableDictionary alloc] init];
+            NSString *tempString = [[NSString alloc] init];
+            
+            //-- ID
+            int field1 = (int) sqlite3_column_int(statment, 0);
+            tempString = [NSString stringWithFormat:@"%i", field1];
+            [mDic setValue:tempString forKey:@"id"];
+            
+            //-- DATA
+            double field2 = (double) sqlite3_column_double(statment, 1);
+            tempString = [NSString stringWithFormat :@"%f", field2];
+            [mDic setValue:tempString forKey:KEY_DATA];
+            
+            //-- GLICEMIA BASALE
+            double field3 = (double) sqlite3_column_double(statment, 2);
+            tempString = [NSString stringWithFormat :@"%f", field3];
+            [mDic setValue:tempString forKey:KEY_GLI_BASALE];
+            
+            //-- GLICEMIA POSTPRANDIALE
+            double field4 = (double) sqlite3_column_double(statment, 3);
+            tempString = [NSString stringWithFormat :@"%f", field4];
+            [mDic setValue:tempString forKey:KEY_GLI_POSTPRANDIALE];
+            
+            //-- GLICEMIA PREPARDIALE
+            double field5 = (double) sqlite3_column_double(statment, 4);
+            tempString = [NSString stringWithFormat :@"%f", field5];
+            [mDic setValue:tempString forKey:KEY_GLI_PREPRANDIALE];
+
+            [returnArray addObject:mDic];
+        }//end while
+        sqlite3_finalize(statment);
+    }//end if
+    else
+        NSLog(@"***** Error do not possible get all pesi");
+    
+    return returnArray;
+
 }
 
 @end
