@@ -10,4 +10,9 @@
 
 @interface FirstViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
+- (IBAction)pressOnScreen:(id)sender;
+- (IBAction)swipeOnScreen:(id)sender;
 @end

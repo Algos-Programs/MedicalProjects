@@ -8,6 +8,7 @@
 
 #import "TestDatabase.h"
 #import "Database.h"
+#import "Database.m"
 
 @implementation TestDatabase
 
@@ -199,6 +200,8 @@ Database *db;
 
     double data = [[dic valueForKey:KEY_DATA] doubleValue];
     NSAssert(data == 765, @"5 - data %f != 342", data);
+    
+    //--- DB close
 }
 
 - (void)testObjectsFromPressures {

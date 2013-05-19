@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A913469B1747A1A700778D9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036EC17458D3100F808C3 /* main.m */; };
+		A913469C1747A1A700778D9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036F017458D3100F808C3 /* AppDelegate.m */; };
+		A913469D1747A1A700778D9C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036FC17458D3100F808C3 /* FirstViewController.m */; };
+		A913469E1747A1A700778D9C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A980370317458D3100F808C3 /* SecondViewController.m */; };
+		A913469F1747A1A700778D9C /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
+		A91346A11747A1A700778D9C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A91346A21747A1A700778D9C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
+		A91346A31747A1A700778D9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
+		A91346A41747A1A700778D9C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E417458D3100F808C3 /* CoreGraphics.framework */; };
+		A91346A61747A1A700778D9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98036E917458D3100F808C3 /* InfoPlist.strings */; };
+		A91346A71747A1A700778D9C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F217458D3100F808C3 /* Default.png */; };
+		A91346A81747A1A700778D9C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F417458D3100F808C3 /* Default@2x.png */; };
+		A91346A91747A1A700778D9C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F617458D3100F808C3 /* Default-568h@2x.png */; };
+		A91346AA1747A1A700778D9C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98036F817458D3100F808C3 /* MainStoryboard.storyboard */; };
+		A91346AB1747A1A700778D9C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036FE17458D3100F808C3 /* first.png */; };
+		A91346AC1747A1A700778D9C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370017458D3100F808C3 /* first@2x.png */; };
+		A91346AD1747A1A700778D9C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370517458D3100F808C3 /* second.png */; };
+		A91346AE1747A1A700778D9C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370717458D3100F808C3 /* second@2x.png */; };
+		A91346B61747A42900778D9C /* TestFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B51747A42900778D9C /* TestFirstViewController.m */; };
+		A91346BA1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
+		A91346BB1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
+		A975140A17490E360057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
+		A975140B17490E690057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
+		A975140E17490EED0057D66D /* TestDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140D17490EED0057D66D /* TestDataType.m */; };
+		A975141A174929F20057D66D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9751419174929F10057D66D /* ListViewController.m */; };
+		A975141B174929F20057D66D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9751419174929F10057D66D /* ListViewController.m */; };
+		A975141F17492A270057D66D /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A975141E17492A270057D66D /* Util.m */; };
+		A975142017492A270057D66D /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A975141E17492A270057D66D /* Util.m */; };
 		A98036E117458D3100F808C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
 		A98036E317458D3100F808C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
 		A98036E517458D3100F808C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E417458D3100F808C3 /* CoreGraphics.framework */; };
@@ -44,6 +72,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A91346B21747A1A700778D9C /* MedicalProjects copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedicalProjects copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91346B31747A1A700778D9C /* MedicalProjects copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjects copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjects copy-Info.plist"; sourceTree = "<absolute>"; };
+		A91346B41747A42900778D9C /* TestFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFirstViewController.h; sourceTree = "<group>"; };
+		A91346B51747A42900778D9C /* TestFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFirstViewController.m; sourceTree = "<group>"; };
+		A91346B81747B19300778D9C /* WeightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightView.h; sourceTree = "<group>"; };
+		A91346B91747B19300778D9C /* WeightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightView.m; sourceTree = "<group>"; };
+		A975140817490E360057D66D /* DataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
+		A975140917490E360057D66D /* DataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataType.m; sourceTree = "<group>"; };
+		A975140C17490EED0057D66D /* TestDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataType.h; sourceTree = "<group>"; };
+		A975140D17490EED0057D66D /* TestDataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDataType.m; sourceTree = "<group>"; };
+		A9751418174929F10057D66D /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		A9751419174929F10057D66D /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		A975141D17492A270057D66D /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		A975141E17492A270057D66D /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		A98036DD17458D3100F808C3 /* MedicalProjects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalProjects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98036E017458D3100F808C3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A98036E217458D3100F808C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,6 +122,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A91346A01747A1A700778D9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91346A11747A1A700778D9C /* libsqlite3.0.dylib in Frameworks */,
+				A91346A21747A1A700778D9C /* UIKit.framework in Frameworks */,
+				A91346A31747A1A700778D9C /* Foundation.framework in Frameworks */,
+				A91346A41747A1A700778D9C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A98036DA17458D3100F808C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +157,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91346981747A18E00778D9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A98036FB17458D3100F808C3 /* FirstViewController.h */,
+				A98036FC17458D3100F808C3 /* FirstViewController.m */,
+				A9751418174929F10057D66D /* ListViewController.h */,
+				A9751419174929F10057D66D /* ListViewController.m */,
+				A9751417174929BC0057D66D /* Tests */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A91346B71747B16300778D9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A91346B81747B19300778D9C /* WeightView.h */,
+				A91346B91747B19300778D9C /* WeightView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A975140717490E0C0057D66D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A975140F174910FA0057D66D /* Lib */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A975140F174910FA0057D66D /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A975141C17492A0A0057D66D /* Tests */,
+				A975140817490E360057D66D /* DataType.h */,
+				A975140917490E360057D66D /* DataType.m */,
+				A975141D17492A270057D66D /* Util.h */,
+				A975141E17492A270057D66D /* Util.m */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		A9751417174929BC0057D66D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A91346B41747A42900778D9C /* TestFirstViewController.h */,
+				A91346B51747A42900778D9C /* TestFirstViewController.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		A975141C17492A0A0057D66D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A975140C17490EED0057D66D /* TestDataType.h */,
+				A975140D17490EED0057D66D /* TestDataType.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		A98036D417458D3100F808C3 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +224,7 @@
 				A980371517458D3100F808C3 /* MedicalProjectsTests */,
 				A98036DF17458D3100F808C3 /* Frameworks */,
 				A98036DE17458D3100F808C3 /* Products */,
+				A91346B31747A1A700778D9C /* MedicalProjects copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +233,7 @@
 			children = (
 				A98036DD17458D3100F808C3 /* MedicalProjects.app */,
 				A980370E17458D3100F808C3 /* MedicalProjectsTests.octest */,
+				A91346B21747A1A700778D9C /* MedicalProjects copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,12 +252,13 @@
 		A98036E617458D3100F808C3 /* MedicalProjects */ = {
 			isa = PBXGroup;
 			children = (
+				A975140717490E0C0057D66D /* Models */,
+				A91346B71747B16300778D9C /* Views */,
+				A91346981747A18E00778D9C /* Controllers */,
 				A980372617458D4700F808C3 /* Database */,
 				A98036EF17458D3100F808C3 /* AppDelegate.h */,
 				A98036F017458D3100F808C3 /* AppDelegate.m */,
 				A98036F817458D3100F808C3 /* MainStoryboard.storyboard */,
-				A98036FB17458D3100F808C3 /* FirstViewController.h */,
-				A98036FC17458D3100F808C3 /* FirstViewController.m */,
 				A98036FE17458D3100F808C3 /* first.png */,
 				A980370017458D3100F808C3 /* first@2x.png */,
 				A980370217458D3100F808C3 /* SecondViewController.h */,
@@ -202,6 +317,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A91346991747A1A700778D9C /* aWeights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A91346AF1747A1A700778D9C /* Build configuration list for PBXNativeTarget "aWeights" */;
+			buildPhases = (
+				A913469A1747A1A700778D9C /* Sources */,
+				A91346A01747A1A700778D9C /* Frameworks */,
+				A91346A51747A1A700778D9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aWeights;
+			productName = MedicalProjects;
+			productReference = A91346B21747A1A700778D9C /* MedicalProjects copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A98036DC17458D3100F808C3 /* MedicalProjects */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A980372017458D3100F808C3 /* Build configuration list for PBXNativeTarget "MedicalProjects" */;
@@ -261,11 +393,28 @@
 			targets = (
 				A98036DC17458D3100F808C3 /* MedicalProjects */,
 				A980370D17458D3100F808C3 /* MedicalProjectsTests */,
+				A91346991747A1A700778D9C /* aWeights */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A91346A51747A1A700778D9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91346A61747A1A700778D9C /* InfoPlist.strings in Resources */,
+				A91346A71747A1A700778D9C /* Default.png in Resources */,
+				A91346A81747A1A700778D9C /* Default@2x.png in Resources */,
+				A91346A91747A1A700778D9C /* Default-568h@2x.png in Resources */,
+				A91346AA1747A1A700778D9C /* MainStoryboard.storyboard in Resources */,
+				A91346AB1747A1A700778D9C /* first.png in Resources */,
+				A91346AC1747A1A700778D9C /* first@2x.png in Resources */,
+				A91346AD1747A1A700778D9C /* second.png in Resources */,
+				A91346AE1747A1A700778D9C /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A98036DB17458D3100F808C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +458,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A913469A1747A1A700778D9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A975140B17490E690057D66D /* DataType.m in Sources */,
+				A913469B1747A1A700778D9C /* main.m in Sources */,
+				A913469C1747A1A700778D9C /* AppDelegate.m in Sources */,
+				A913469D1747A1A700778D9C /* FirstViewController.m in Sources */,
+				A913469E1747A1A700778D9C /* SecondViewController.m in Sources */,
+				A913469F1747A1A700778D9C /* Database.m in Sources */,
+				A91346BB1747B19300778D9C /* WeightView.m in Sources */,
+				A975141B174929F20057D66D /* ListViewController.m in Sources */,
+				A975142017492A270057D66D /* Util.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A98036D917458D3100F808C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +483,10 @@
 				A98036FD17458D3100F808C3 /* FirstViewController.m in Sources */,
 				A980370417458D3100F808C3 /* SecondViewController.m in Sources */,
 				A980372917458D5B00F808C3 /* Database.m in Sources */,
+				A91346BA1747B19300778D9C /* WeightView.m in Sources */,
+				A975140A17490E360057D66D /* DataType.m in Sources */,
+				A975141A174929F20057D66D /* ListViewController.m in Sources */,
+				A975141F17492A270057D66D /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +496,8 @@
 			files = (
 				A980371D17458D3100F808C3 /* MedicalProjectsTests.m in Sources */,
 				A980372E1745909000F808C3 /* TestDatabase.m in Sources */,
+				A91346B61747A42900778D9C /* TestFirstViewController.m in Sources */,
+				A975140E17490EED0057D66D /* TestDataType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +539,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A91346B01747A1A700778D9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "WEIGHT_VERSION=1";
+				INFOPLIST_FILE = "MedicalProjects copy-Info.plist";
+				OTHER_CFLAGS = "-DWEIGHT_VERSION=1";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A91346B11747A1A700778D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "WEIGHT_VERSION=1";
+				INFOPLIST_FILE = "MedicalProjects copy-Info.plist";
+				OTHER_CFLAGS = "-DWEIGHT_VERSION=1";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		A980371E17458D3100F808C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,6 +680,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A91346AF1747A1A700778D9C /* Build configuration list for PBXNativeTarget "aWeights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A91346B01747A1A700778D9C /* Debug */,
+				A91346B11747A1A700778D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A98036D817458D3100F808C3 /* Build configuration list for PBXProject "MedicalProjects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -499,6 +705,7 @@
 				A980372217458D3100F808C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A980372317458D3100F808C3 /* Build configuration list for PBXNativeTarget "MedicalProjectsTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +714,7 @@
 				A980372517458D3100F808C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

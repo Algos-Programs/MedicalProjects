@@ -13,6 +13,11 @@ static NSString * const TABLE_NAME_WEIGHTS = @"Pesi";
 static NSString * const TABLE_NAME_PRESSURES = @"Pressioni";
 static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 
+@interface Database ()
+- (void)closeDb;
+
+@end
+
 @implementation Database
 
 
@@ -32,6 +37,10 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
         sqlite3_close(db);
         NSLog(@"**** ERROR: Fallita apertura DB");
     }
+}
+
+- (void) closeDb {
+    sqlite3_close(db);
 }
 
 //************************************
@@ -256,6 +265,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 //************************************
 
 - (NSArray *)objectsFromWeight {
+    [self openDB];
     NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@ FROM '%@'", KEY_DATA, KEY_WEIGHT, TABLE_NAME_WEIGHTS];
     sqlite3_stmt *statment;
     
@@ -294,7 +304,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 }
 
 - (NSArray *)objectsFromPressures {
-    
+    [self openDB];
     NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_PRE_MAX, KEY_PRE_MIN, TABLE_NAME_PRESSURES];
     sqlite3_stmt *statment;
     
@@ -340,6 +350,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 }
 
 - (NSArray *)objectsFromGliocosic {
+    [self openDB];
     NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_GLI_BASALE, KEY_GLI_POSTPRANDIALE, KEY_GLI_PREPRANDIALE, TABLE_NAME_GLIOCOSIC];
     sqlite3_stmt *statment;
     
