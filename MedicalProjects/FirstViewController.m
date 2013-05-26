@@ -10,6 +10,7 @@
 #import "WeightView.h"
 #import "DataType.h"
 #import "Database.h"
+#import "Util.h"
 
 @interface FirstViewController ()
 
@@ -22,8 +23,7 @@
 
 @implementation FirstViewController
 
-static BOOL WEIGHTs_VERSION = NO;
-
+static int version = -1;
 
 - (void)viewDidLoad
 {
@@ -48,8 +48,8 @@ static BOOL WEIGHTs_VERSION = NO;
  @return -1 se non riconosce la versione.
  */
 - (int)setVersion {
-    WEIGHTs_VERSION = YES;
-    return 1;
+    version = [Util setVersion];
+    return version;
 }
 
 ///Fa scomparire la tastira.
@@ -75,17 +75,49 @@ static BOOL WEIGHTs_VERSION = NO;
 
 /// Quando l'utente fa click su save. Salva il valore.
 - (IBAction)pressButtonSave:(id)sender {
-    NSString *str = self.textField.text;
-    if ([DataType checkValue:str]) {
-        Database *db = [[Database alloc] init];
-        if(![db insertWeight:[str doubleValue] withData:[[NSDate date] timeIntervalSince1970]]) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    if (version == 1) { //Weight
+        NSString *str = self.textField.text;
+        if ([DataType checkValue:str]) {
+            Database *db = [[Database alloc] init];
+            if(![db insertWeight:[str doubleValue] withData:[[NSDate date] timeIntervalSince1970]]) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alertView show];
+            }
+        } 
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alertView show];
         }
     }
-    else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertView show];
+    
+    if (version == 2) {
+        NSString *str = self.textField.text;
+        if ([DataType checkValue:str]) {
+            Database *db = [[Database alloc] init];
+            if(![db insertGlicosicBasale:[str doubleValue] withDate:[[NSDate date] timeIntervalSince1970]]) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alertView show];
+            }
+        }
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    }
+    
+    if (version == 3) {
+        NSString *str = self.textField.text;
+        if ([DataType checkValue:str]) {
+            Database *db = [[Database alloc] init];
+            if(![db insertPressureMax:[str doubleValue] withDate:[[NSDate date] timeIntervalSince1970]]) {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alertView show];
+            }
+        }
+        else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
     }
 }
 

@@ -12,10 +12,10 @@
 
 + (BOOL)checkValue:(NSString *)value {
     double doubleValue = [value doubleValue];
-    if (doubleValue <= 0 || doubleValue > 300) {
-        return FALSE;
+    if (doubleValue > 0 && doubleValue < 300) {
+        return TRUE;
     }
-    return TRUE;
+    return FALSE;
 }
 
 @end

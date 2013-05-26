@@ -17,7 +17,7 @@
 
 - (void)testCheckValue {
     //-- Stringa - NON accettabile.
-    NSString *str = @"CIAO";
+    NSString *str = @"CIxAO";
     BOOL returnValue  = [DataType checkValue:str];
     NSAssert(!returnValue, @"1 - Ciao accettato come valore");
     
@@ -69,7 +69,7 @@
 
     NSString *str12 = @"20ewf";
     BOOL returnValue12 = [DataType checkValue:str12];
-    NSAssert(!returnValue12, @"13 - %f NON accetto come valore", [str12 doubleValue]);
+    NSAssert(returnValue12, @"13 - %f NON accetto come valore", [str12 doubleValue]);
     
     NSString *str13 = @"qwe20e";
     BOOL returnValue13 = [DataType checkValue:str13];

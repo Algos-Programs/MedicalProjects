@@ -14,8 +14,12 @@ static NSString * const TABLE_NAME_PRESSURES = @"Pressioni";
 static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 
 @interface Database ()
+- (NSString *) filePath;
+- (void) openDB;
 - (void)closeDb;
-
+- (BOOL)createTableNamed:(NSString *)tableName;
+- (BOOL)insertValue:(double)value withData:(double)data withType:(int)type withTableName:(NSString *)tableName;
+- (NSArray *)objectFromTableNamed:(NSString *)tableName;
 @end
 
 @implementation Database
@@ -47,7 +51,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 #pragma mark - Creazione Tabelle
 //************************************
 
-/// Crea tablella dei PESI
+/// Crea tablella dei PESI.
 - (BOOL)createTableWeight {
     [self openDB];
     char *err;
@@ -65,36 +69,26 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return true;
 }
 
-/// Crea tablella della PRESSIONE
+/// Crea tablella della PRESSIONE.
 - (BOOL)createTablePressure {
-    char *err;
-    NSString *query = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
-                       "INTEGER PRIMARY KEY, '%@' REAL, '%@' REAL, '%@' REAL);",
-                       TABLE_NAME_PRESSURES,
-                       @"id",
-                       KEY_DATA, //1...
-                       KEY_PRE_MAX,
-                       KEY_PRE_MIN];
-    [self openDB];
-    if (sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
-        sqlite3_close(db);
-        NSLog(@"*****ERRORE:Table %@ falied create. - %s", TABLE_NAME_WEIGHTS, err);
-        return false;
-    }
-    return true;
+    return [self createTableNamed:TABLE_NAME_PRESSURES];
 }
 
-/// Crea tablella della GLICEMIA
+/// Crea tablella della GLICEMIA.
 - (BOOL)createTableGlicosic {
+    return [self createTableNamed:TABLE_NAME_GLIOCOSIC];
+}
+
+/// Crea una tabella con campi (id, data, valore, tipo) con il nome passato.
+- (BOOL)createTableNamed:(NSString *)tableName {
     char *err;
     NSString *query = [[NSString alloc] initWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
-                       "INTEGER PRIMARY KEY, '%@' REAL, '%@' REAL, '%@' REAL, '%@' REAL);",
-                       TABLE_NAME_GLIOCOSIC,
+                       "INTEGER PRIMARY KEY, '%@' REAL, '%@' REAL, '%@' INTEGER);",
+                       tableName,
                        @"id",
-                       KEY_DATA, //1...
-                       KEY_GLI_BASALE,
-                       KEY_GLI_POSTPRANDIALE,
-                       KEY_GLI_PREPRANDIALE];
+                       KEY_DATA,
+                       KEY_VALUE, //Valore della glicemaia
+                       KEY_TYPE]; //Tipo di glicemia
     [self openDB];
     if (sqlite3_exec(db, [query UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(db);
@@ -108,6 +102,7 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 #pragma mark - Inserimento Record
 //************************************
 
+/// Inserisce il peso e la data passata nella tabella PESI.
 - (BOOL)insertWeight:(double)weight withData:(double)date {
     int countOfDb = 0;
     [self openDB];
@@ -126,12 +121,40 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
     return TRUE;
 }
 
-- (BOOL)insertGlicoicWithBasale:(double)basale withPrepardiale:(double)prepard withPostPrandiale:(double)post withDate:(double)date {
+/// Inserisce la glicemia e la data passata nella tablella GLICEMIA con TIPO = 1
+- (BOOL)insertGlicosicBasale:(double)basale withDate:(double)date {
+    return [self insertValue:basale withData:date withType:1 withTableName:TABLE_NAME_GLIOCOSIC];
+}
+
+/// Inserisce la glicemia e la data passata nella tablella GLICEMIA con TIPO = 2
+- (BOOL)insertGlicosicPreprandiale:(double)preprandiale withDate:(double)date {
+    return [self insertValue:preprandiale withData:date withType:2 withTableName:TABLE_NAME_GLIOCOSIC];
+}
+
+/// Inserisce la glicemia e la data passata nella tablella GLICEMIA con TIPO = 3
+- (BOOL)insertGlicosicPostprandiale:(double)postprandiale withDate:(double)date {
+    return [self insertValue:postprandiale withData:date withType:3 withTableName:TABLE_NAME_GLIOCOSIC];
+}
+
+/// Inserisce la pressione e la data passata nella tablella GLICEMIA con TIPO = 2
+- (BOOL)insertPressureMin:(double)minValue withDate:(double)date {
+    return [self insertValue:minValue withData:date withType:2 withTableName:TABLE_NAME_PRESSURES];
+}
+
+/// Inserisce la pressione e la data passata nella tablella GLICEMIA con TIPO = 1
+- (BOOL)insertPressureMax:(double)maxValue withDate:(double)date {
+    return [self insertValue:maxValue withData:date withType:1 withTableName:TABLE_NAME_PRESSURES];
+
+}
+
+///Inserisce i valorei passati nei campi (id, data, valore, tipo) della tabella PASSATA.
+- (BOOL)insertValue:(double)value withData:(double)date withType:(int)type withTableName:(NSString *)tableName {
     int countOfDb = 0;
+    [self createTableNamed:tableName];
     [self openDB];
-    countOfDb = [self countOfDbFromGliocosic] + 1;
-    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@','%@','%@')"
-                     "VALUES ('%d','%f','%f','%f','%f')", TABLE_NAME_GLIOCOSIC, @"id",KEY_DATA, KEY_GLI_BASALE, KEY_GLI_PREPRANDIALE, KEY_GLI_POSTPRANDIALE, countOfDb, date, basale, prepard, post];
+    countOfDb = [self countOfDbFromTableNamed:tableName] + 1;
+    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@','%@')"
+                     "VALUES ('%d','%f','%f','%i')", tableName, @"id",KEY_DATA, KEY_VALUE, KEY_TYPE, countOfDb, date, value, type];
     
     
     char *err;
@@ -142,26 +165,6 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
         return FALSE;
     }
     return TRUE;
-
-}
-
-- (BOOL)insertPressreWithPressMax:(double)pressMax withPresMin:(double)pressMin withDate:(double)date {
-    int countOfDb = 0;
-    [self openDB];
-    countOfDb = [self countOfDbFromPressures] + 1;
-    NSString *sql = [NSString stringWithFormat:@"INSERT OR REPLACE INTO '%@' ('%@','%@','%@','%@')"
-                     "VALUES ('%d','%f','%f','%f')", TABLE_NAME_PRESSURES, @"id",KEY_DATA, KEY_PRE_MAX, KEY_PRE_MIN, countOfDb, date, pressMax, pressMin];
-    
-    
-    char *err;
-    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
-        
-        sqlite3_close(db);
-        NSLog(@"****** Not Posssible Insert New Record In %@, with error: '%s'", TABLE_NAME_PRESSURES,err);
-        return FALSE;
-    }
-    return TRUE;
-
 }
 
 //************************************
@@ -304,8 +307,12 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
 }
 
 - (NSArray *)objectsFromPressures {
+    return [self objectFromTableNamed:TABLE_NAME_PRESSURES];
+}
+
+- (NSArray *)objectsFromGliocosic {
     [self openDB];
-    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_PRE_MAX, KEY_PRE_MIN, TABLE_NAME_PRESSURES];
+    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_VALUE, KEY_TYPE, TABLE_NAME_GLIOCOSIC];
     sqlite3_stmt *statment;
     
     NSMutableArray *returnArray = [[NSMutableArray alloc] init];
@@ -327,15 +334,15 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
             tempString = [NSString stringWithFormat :@"%f", field2];
             [mDic setValue:tempString forKey:KEY_DATA];
             
-            //-- PRESSIONE MAX
+            //-- VALORE
             double field3 = (double) sqlite3_column_double(statment, 2);
             tempString = [NSString stringWithFormat :@"%f", field3];
-            [mDic setValue:tempString forKey:KEY_PRE_MAX];
+            [mDic setValue:tempString forKey:KEY_VALUE];
             
-            //-- PRESSIONE MIN
+            //-- TIPO
             double field4 = (double) sqlite3_column_double(statment, 3);
             tempString = [NSString stringWithFormat :@"%f", field4];
-            [mDic setValue:tempString forKey:KEY_PRE_MIN];
+            [mDic setValue:tempString forKey:KEY_TYPE];
             
             
             [returnArray addObject:mDic];
@@ -346,12 +353,11 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
         NSLog(@"***** Error do not possible get all pesi");
     
     return returnArray;
-
 }
 
-- (NSArray *)objectsFromGliocosic {
+- (NSArray *)objectFromTableNamed:(NSString *)tableName {
     [self openDB];
-    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_GLI_BASALE, KEY_GLI_POSTPRANDIALE, KEY_GLI_PREPRANDIALE, TABLE_NAME_GLIOCOSIC];
+    NSString * qsql = [NSString stringWithFormat:@"SELECT id,%@,%@,%@ FROM '%@'", KEY_DATA, KEY_VALUE, KEY_TYPE, tableName];
     sqlite3_stmt *statment;
     
     NSMutableArray *returnArray = [[NSMutableArray alloc] init];
@@ -373,21 +379,17 @@ static NSString * const TABLE_NAME_GLIOCOSIC = @"Glicemia";
             tempString = [NSString stringWithFormat :@"%f", field2];
             [mDic setValue:tempString forKey:KEY_DATA];
             
-            //-- GLICEMIA BASALE
+            //-- VALORE
             double field3 = (double) sqlite3_column_double(statment, 2);
             tempString = [NSString stringWithFormat :@"%f", field3];
-            [mDic setValue:tempString forKey:KEY_GLI_BASALE];
+            [mDic setValue:tempString forKey:KEY_VALUE];
             
-            //-- GLICEMIA POSTPRANDIALE
+            //-- TIPO
             double field4 = (double) sqlite3_column_double(statment, 3);
             tempString = [NSString stringWithFormat :@"%f", field4];
-            [mDic setValue:tempString forKey:KEY_GLI_POSTPRANDIALE];
+            [mDic setValue:tempString forKey:KEY_TYPE];
             
-            //-- GLICEMIA PREPARDIALE
-            double field5 = (double) sqlite3_column_double(statment, 4);
-            tempString = [NSString stringWithFormat :@"%f", field5];
-            [mDic setValue:tempString forKey:KEY_GLI_PREPRANDIALE];
-
+            
             [returnArray addObject:mDic];
         }//end while
         sqlite3_finalize(statment);

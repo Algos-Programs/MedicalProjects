@@ -16,6 +16,8 @@
 
 @implementation ListViewController
 
+static NSString *key_value;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -37,7 +39,17 @@
     //-- Weight Version
     if ([Util setVersion] == 1) {
         values = [db objectsFromWeight];
+        key_value = KEY_WEIGHT;
     }
+    if ([Util setVersion] == 2) {
+        values = [db objectsFromGliocosic];
+        key_value = KEY_VALUE;
+    }
+    if ([Util setVersion] == 3) {
+        values = [db objectsFromPressures];
+        key_value = KEY_VALUE;
+    }
+    
     [self.tableView reloadData];
 }
 - (void)didReceiveMemoryWarning
@@ -73,7 +85,7 @@
     tempDic = [values objectAtIndex:indexPath.row];
 
     UILabel *labelName = [[UILabel alloc] initWithFrame:CGRectMake(105, 10, 186, 21)];
-    labelName.text = [tempDic objectForKey:KEY_WEIGHT];
+    labelName.text = [tempDic objectForKey:key_value];
     cell.textLabel.text = labelName.text;
     //[cell addSubview:labelName];
 

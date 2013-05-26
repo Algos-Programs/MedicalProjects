@@ -15,14 +15,9 @@ static NSString * const KEY_DATA = @"Data";
 //-- aWeight
 static NSString * const KEY_WEIGHT = @"Peso";
 
-//-- aPressure
-static NSString * const KEY_PRE_MAX = @"Press_Max"; //Pressione Sistolica.
-static NSString * const KEY_PRE_MIN = @"Press_min"; //Pressione Diastolica.
-
-//-- aGlicosic
-static NSString * const KEY_GLI_BASALE = @"Glic_Basale"; //Glicemia Basale - Lontano dai pasti.
-static NSString * const KEY_GLI_PREPRANDIALE = @"Glic_Prepandiale"; //Glicemia Prepandiale - Prima dei pasti.
-static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemia Postprandiale - Dopo dai pasti.
+//-- aGlicosic / aPressure
+static NSString * const KEY_VALUE = @"Valore"; //Valore della Glicemia
+static NSString * const KEY_TYPE = @"Tipo"; //Tipo di glicemia 1 - Basale / 2 - Preprandiale / 3 - Postprandiale
 
 @protocol specipsDatabase <NSObject>
 
@@ -42,8 +37,13 @@ static NSString * const KEY_GLI_POSTPRANDIALE = @"Glic_Postprandiale"; //Glicemi
 - (BOOL)createTableGlicosic;
 
 - (BOOL)insertWeight:(double)weight withData:(double)date;
-- (BOOL)insertGlicoicWithBasale:(double)basale withPrepardiale:(double)prepard withPostPrandiale:(double)post withDate:(double)date;
-- (BOOL)insertPressreWithPressMax:(double)max withPresMin:(double)pressMin withDate:(double)date;
+
+- (BOOL)insertGlicosicBasale:(double)basale withDate:(double)date;
+- (BOOL)insertGlicosicPreprandiale:(double)preprandiale withDate:(double)date;
+- (BOOL)insertGlicosicPostprandiale:(double)postprandiale withDate:(double)date;
+
+- (BOOL)insertPressureMin:(double)minValue withDate:(double)date;
+- (BOOL)insertPressureMax:(double)maxValue withDate:(double)date;
 
 - (int)countOfDbFromWeights;
 - (int)countOfDbFromGliocosic;

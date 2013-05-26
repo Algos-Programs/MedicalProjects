@@ -28,6 +28,8 @@
 		A91346B61747A42900778D9C /* TestFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B51747A42900778D9C /* TestFirstViewController.m */; };
 		A91346BA1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
 		A91346BB1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
+		A915DB18174F8DF500A33103 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A915DB1A174F8DF500A33103 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A915DB19174F8DF500A33103 /* libsqlite3.dylib */; };
 		A975140A17490E360057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
 		A975140B17490E690057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
 		A975140E17490EED0057D66D /* TestDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140D17490EED0057D66D /* TestDataType.m */; };
@@ -59,6 +61,8 @@
 		A980372917458D5B00F808C3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
 		A980372B17458DBA00F808C3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
 		A980372E1745909000F808C3 /* TestDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372D1745909000F808C3 /* TestDatabase.m */; };
+		A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
+		A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,7 @@
 		A91346B51747A42900778D9C /* TestFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFirstViewController.m; sourceTree = "<group>"; };
 		A91346B81747B19300778D9C /* WeightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightView.h; sourceTree = "<group>"; };
 		A91346B91747B19300778D9C /* WeightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightView.m; sourceTree = "<group>"; };
+		A915DB19174F8DF500A33103 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A975140817490E360057D66D /* DataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
 		A975140917490E360057D66D /* DataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataType.m; sourceTree = "<group>"; };
 		A975140C17490EED0057D66D /* TestDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataType.h; sourceTree = "<group>"; };
@@ -119,6 +124,8 @@
 		A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A980372C1745909000F808C3 /* TestDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDatabase.h; sourceTree = "<group>"; };
 		A980372D1745909000F808C3 /* TestDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDatabase.m; sourceTree = "<group>"; };
+		A9FC269117524AAE002459FA /* DatabaseGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseGeneral.h; sourceTree = "<group>"; };
+		A9FC269217524AAE002459FA /* DatabaseGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseGeneral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +155,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A915DB1A174F8DF500A33103 /* libsqlite3.dylib in Frameworks */,
+				A915DB18174F8DF500A33103 /* libsqlite3.0.dylib in Frameworks */,
 				A980371017458D3100F808C3 /* SenTestingKit.framework in Frameworks */,
 				A980371117458D3100F808C3 /* UIKit.framework in Frameworks */,
 				A980371217458D3100F808C3 /* Foundation.framework in Frameworks */,
@@ -219,6 +228,7 @@
 		A98036D417458D3100F808C3 = {
 			isa = PBXGroup;
 			children = (
+				A915DB19174F8DF500A33103 /* libsqlite3.dylib */,
 				A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */,
 				A98036E617458D3100F808C3 /* MedicalProjects */,
 				A980371517458D3100F808C3 /* MedicalProjectsTests */,
@@ -306,6 +316,8 @@
 		A980372617458D4700F808C3 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				A9FC269117524AAE002459FA /* DatabaseGeneral.h */,
+				A9FC269217524AAE002459FA /* DatabaseGeneral.m */,
 				A980372717458D5B00F808C3 /* Database.h */,
 				A980372817458D5B00F808C3 /* Database.m */,
 				A980372C1745909000F808C3 /* TestDatabase.h */,
@@ -471,6 +483,7 @@
 				A91346BB1747B19300778D9C /* WeightView.m in Sources */,
 				A975141B174929F20057D66D /* ListViewController.m in Sources */,
 				A975142017492A270057D66D /* Util.m in Sources */,
+				A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +500,7 @@
 				A975140A17490E360057D66D /* DataType.m in Sources */,
 				A975141A174929F20057D66D /* ListViewController.m in Sources */,
 				A975141F17492A270057D66D /* Util.m in Sources */,
+				A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
