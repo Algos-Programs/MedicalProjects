@@ -13,7 +13,7 @@
 + (int)setVersion {
 #warning Implementare.
     //Controllo del target - Inserischi qui i dati Guido. 
-    return 1;
+    return 2;
 }
 
 + (NSString *)data:(NSTimeInterval *)timeInterval {
