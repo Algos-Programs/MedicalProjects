@@ -12,7 +12,7 @@
 
 + (int)setVersion {
 #warning Implementare.
-    //Controllo del target
+    //Controllo del target - Inserischi qui i dati Guido. 
     return 1;
 }
 
