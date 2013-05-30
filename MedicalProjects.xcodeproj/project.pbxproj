@@ -30,6 +30,52 @@
 		A91346BB1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
 		A915DB18174F8DF500A33103 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
 		A915DB1A174F8DF500A33103 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A915DB19174F8DF500A33103 /* libsqlite3.dylib */; };
+		A9516729175795E50058E5B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036EC17458D3100F808C3 /* main.m */; };
+		A951672A175795E50058E5B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036F017458D3100F808C3 /* AppDelegate.m */; };
+		A951672B175795E50058E5B4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036FC17458D3100F808C3 /* FirstViewController.m */; };
+		A951672C175795E50058E5B4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A980370317458D3100F808C3 /* SecondViewController.m */; };
+		A951672D175795E50058E5B4 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
+		A951672E175795E50058E5B4 /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
+		A951672F175795E50058E5B4 /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
+		A9516730175795E50058E5B4 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9751419174929F10057D66D /* ListViewController.m */; };
+		A9516731175795E50058E5B4 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A975141E17492A270057D66D /* Util.m */; };
+		A9516732175795E50058E5B4 /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
+		A9516734175795E50058E5B4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A9516735175795E50058E5B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
+		A9516736175795E50058E5B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
+		A9516737175795E50058E5B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E417458D3100F808C3 /* CoreGraphics.framework */; };
+		A9516739175795E50058E5B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98036E917458D3100F808C3 /* InfoPlist.strings */; };
+		A951673A175795E50058E5B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F217458D3100F808C3 /* Default.png */; };
+		A951673B175795E50058E5B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F417458D3100F808C3 /* Default@2x.png */; };
+		A951673C175795E50058E5B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F617458D3100F808C3 /* Default-568h@2x.png */; };
+		A951673D175795E50058E5B4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98036F817458D3100F808C3 /* MainStoryboard.storyboard */; };
+		A951673E175795E50058E5B4 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036FE17458D3100F808C3 /* first.png */; };
+		A951673F175795E50058E5B4 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370017458D3100F808C3 /* first@2x.png */; };
+		A9516740175795E50058E5B4 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370517458D3100F808C3 /* second.png */; };
+		A9516741175795E50058E5B4 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370717458D3100F808C3 /* second@2x.png */; };
+		A9516749175795F40058E5B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036EC17458D3100F808C3 /* main.m */; };
+		A951674A175795F40058E5B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036F017458D3100F808C3 /* AppDelegate.m */; };
+		A951674B175795F40058E5B4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036FC17458D3100F808C3 /* FirstViewController.m */; };
+		A951674C175795F40058E5B4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A980370317458D3100F808C3 /* SecondViewController.m */; };
+		A951674D175795F40058E5B4 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
+		A951674E175795F40058E5B4 /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
+		A951674F175795F40058E5B4 /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
+		A9516750175795F40058E5B4 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9751419174929F10057D66D /* ListViewController.m */; };
+		A9516751175795F40058E5B4 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A975141E17492A270057D66D /* Util.m */; };
+		A9516752175795F40058E5B4 /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
+		A9516754175795F40058E5B4 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A9516755175795F40058E5B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
+		A9516756175795F40058E5B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
+		A9516757175795F40058E5B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E417458D3100F808C3 /* CoreGraphics.framework */; };
+		A9516759175795F40058E5B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A98036E917458D3100F808C3 /* InfoPlist.strings */; };
+		A951675A175795F40058E5B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F217458D3100F808C3 /* Default.png */; };
+		A951675B175795F40058E5B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F417458D3100F808C3 /* Default@2x.png */; };
+		A951675C175795F40058E5B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036F617458D3100F808C3 /* Default-568h@2x.png */; };
+		A951675D175795F40058E5B4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98036F817458D3100F808C3 /* MainStoryboard.storyboard */; };
+		A951675E175795F40058E5B4 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = A98036FE17458D3100F808C3 /* first.png */; };
+		A951675F175795F40058E5B4 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370017458D3100F808C3 /* first@2x.png */; };
+		A9516760175795F40058E5B4 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370517458D3100F808C3 /* second.png */; };
+		A9516761175795F40058E5B4 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A980370717458D3100F808C3 /* second@2x.png */; };
 		A975140A17490E360057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
 		A975140B17490E690057D66D /* DataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140917490E360057D66D /* DataType.m */; };
 		A975140E17490EED0057D66D /* TestDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140D17490EED0057D66D /* TestDataType.m */; };
@@ -83,6 +129,10 @@
 		A91346B81747B19300778D9C /* WeightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightView.h; sourceTree = "<group>"; };
 		A91346B91747B19300778D9C /* WeightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightView.m; sourceTree = "<group>"; };
 		A915DB19174F8DF500A33103 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A9516745175795E50058E5B4 /* MedicalProjects copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedicalProjects copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9516746175795E60058E5B4 /* MedicalProjects copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjects copy2-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjects copy2-Info.plist"; sourceTree = "<absolute>"; };
+		A9516765175795F40058E5B4 /* MedicalProjects copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedicalProjects copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9516766175795F40058E5B4 /* MedicalProjects copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjects copy3-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjects copy3-Info.plist"; sourceTree = "<absolute>"; };
 		A975140817490E360057D66D /* DataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
 		A975140917490E360057D66D /* DataType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataType.m; sourceTree = "<group>"; };
 		A975140C17490EED0057D66D /* TestDataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDataType.h; sourceTree = "<group>"; };
@@ -137,6 +187,28 @@
 				A91346A21747A1A700778D9C /* UIKit.framework in Frameworks */,
 				A91346A31747A1A700778D9C /* Foundation.framework in Frameworks */,
 				A91346A41747A1A700778D9C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516733175795E50058E5B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516734175795E50058E5B4 /* libsqlite3.0.dylib in Frameworks */,
+				A9516735175795E50058E5B4 /* UIKit.framework in Frameworks */,
+				A9516736175795E50058E5B4 /* Foundation.framework in Frameworks */,
+				A9516737175795E50058E5B4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516753175795F40058E5B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516754175795F40058E5B4 /* libsqlite3.0.dylib in Frameworks */,
+				A9516755175795F40058E5B4 /* UIKit.framework in Frameworks */,
+				A9516756175795F40058E5B4 /* Foundation.framework in Frameworks */,
+				A9516757175795F40058E5B4 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +307,8 @@
 				A98036DF17458D3100F808C3 /* Frameworks */,
 				A98036DE17458D3100F808C3 /* Products */,
 				A91346B31747A1A700778D9C /* MedicalProjects copy-Info.plist */,
+				A9516746175795E60058E5B4 /* MedicalProjects copy2-Info.plist */,
+				A9516766175795F40058E5B4 /* MedicalProjects copy3-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,6 +318,8 @@
 				A98036DD17458D3100F808C3 /* MedicalProjects.app */,
 				A980370E17458D3100F808C3 /* MedicalProjectsTests.octest */,
 				A91346B21747A1A700778D9C /* MedicalProjects copy.app */,
+				A9516745175795E50058E5B4 /* MedicalProjects copy.app */,
+				A9516765175795F40058E5B4 /* MedicalProjects copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +422,40 @@
 			productReference = A91346B21747A1A700778D9C /* MedicalProjects copy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A9516727175795E50058E5B4 /* aPressure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9516742175795E50058E5B4 /* Build configuration list for PBXNativeTarget "aPressure" */;
+			buildPhases = (
+				A9516728175795E50058E5B4 /* Sources */,
+				A9516733175795E50058E5B4 /* Frameworks */,
+				A9516738175795E50058E5B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aPressure;
+			productName = MedicalProjects;
+			productReference = A9516745175795E50058E5B4 /* MedicalProjects copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9516747175795F40058E5B4 /* aGlucose */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9516762175795F40058E5B4 /* Build configuration list for PBXNativeTarget "aGlucose" */;
+			buildPhases = (
+				A9516748175795F40058E5B4 /* Sources */,
+				A9516753175795F40058E5B4 /* Frameworks */,
+				A9516758175795F40058E5B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aGlucose;
+			productName = MedicalProjects;
+			productReference = A9516765175795F40058E5B4 /* MedicalProjects copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		A98036DC17458D3100F808C3 /* MedicalProjects */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A980372017458D3100F808C3 /* Build configuration list for PBXNativeTarget "MedicalProjects" */;
@@ -406,6 +516,8 @@
 				A98036DC17458D3100F808C3 /* MedicalProjects */,
 				A980370D17458D3100F808C3 /* MedicalProjectsTests */,
 				A91346991747A1A700778D9C /* aWeights */,
+				A9516727175795E50058E5B4 /* aPressure */,
+				A9516747175795F40058E5B4 /* aGlucose */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +536,38 @@
 				A91346AC1747A1A700778D9C /* first@2x.png in Resources */,
 				A91346AD1747A1A700778D9C /* second.png in Resources */,
 				A91346AE1747A1A700778D9C /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516738175795E50058E5B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516739175795E50058E5B4 /* InfoPlist.strings in Resources */,
+				A951673A175795E50058E5B4 /* Default.png in Resources */,
+				A951673B175795E50058E5B4 /* Default@2x.png in Resources */,
+				A951673C175795E50058E5B4 /* Default-568h@2x.png in Resources */,
+				A951673D175795E50058E5B4 /* MainStoryboard.storyboard in Resources */,
+				A951673E175795E50058E5B4 /* first.png in Resources */,
+				A951673F175795E50058E5B4 /* first@2x.png in Resources */,
+				A9516740175795E50058E5B4 /* second.png in Resources */,
+				A9516741175795E50058E5B4 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516758175795F40058E5B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516759175795F40058E5B4 /* InfoPlist.strings in Resources */,
+				A951675A175795F40058E5B4 /* Default.png in Resources */,
+				A951675B175795F40058E5B4 /* Default@2x.png in Resources */,
+				A951675C175795F40058E5B4 /* Default-568h@2x.png in Resources */,
+				A951675D175795F40058E5B4 /* MainStoryboard.storyboard in Resources */,
+				A951675E175795F40058E5B4 /* first.png in Resources */,
+				A951675F175795F40058E5B4 /* first@2x.png in Resources */,
+				A9516760175795F40058E5B4 /* second.png in Resources */,
+				A9516761175795F40058E5B4 /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +628,40 @@
 				A975141B174929F20057D66D /* ListViewController.m in Sources */,
 				A975142017492A270057D66D /* Util.m in Sources */,
 				A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516728175795E50058E5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516729175795E50058E5B4 /* main.m in Sources */,
+				A951672A175795E50058E5B4 /* AppDelegate.m in Sources */,
+				A951672B175795E50058E5B4 /* FirstViewController.m in Sources */,
+				A951672C175795E50058E5B4 /* SecondViewController.m in Sources */,
+				A951672D175795E50058E5B4 /* Database.m in Sources */,
+				A951672E175795E50058E5B4 /* WeightView.m in Sources */,
+				A951672F175795E50058E5B4 /* DataType.m in Sources */,
+				A9516730175795E50058E5B4 /* ListViewController.m in Sources */,
+				A9516731175795E50058E5B4 /* Util.m in Sources */,
+				A9516732175795E50058E5B4 /* DatabaseGeneral.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9516748175795F40058E5B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9516749175795F40058E5B4 /* main.m in Sources */,
+				A951674A175795F40058E5B4 /* AppDelegate.m in Sources */,
+				A951674B175795F40058E5B4 /* FirstViewController.m in Sources */,
+				A951674C175795F40058E5B4 /* SecondViewController.m in Sources */,
+				A951674D175795F40058E5B4 /* Database.m in Sources */,
+				A951674E175795F40058E5B4 /* WeightView.m in Sources */,
+				A951674F175795F40058E5B4 /* DataType.m in Sources */,
+				A9516750175795F40058E5B4 /* ListViewController.m in Sources */,
+				A9516751175795F40058E5B4 /* Util.m in Sources */,
+				A9516752175795F40058E5B4 /* DatabaseGeneral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +752,50 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "WEIGHT_VERSION=1";
 				INFOPLIST_FILE = "MedicalProjects copy-Info.plist";
 				OTHER_CFLAGS = "-DWEIGHT_VERSION=1";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A9516743175795E50058E5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				INFOPLIST_FILE = "MedicalProjects copy2-Info.plist";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9516744175795E50058E5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				INFOPLIST_FILE = "MedicalProjects copy2-Info.plist";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A9516763175795F40058E5B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				INFOPLIST_FILE = "MedicalProjects copy3-Info.plist";
+				PRODUCT_NAME = "MedicalProjects copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9516764175795F40058E5B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				INFOPLIST_FILE = "MedicalProjects copy3-Info.plist";
 				PRODUCT_NAME = "MedicalProjects copy";
 				WRAPPER_EXTENSION = app;
 			};
@@ -699,6 +921,24 @@
 			buildConfigurations = (
 				A91346B01747A1A700778D9C /* Debug */,
 				A91346B11747A1A700778D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9516742175795E50058E5B4 /* Build configuration list for PBXNativeTarget "aPressure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9516743175795E50058E5B4 /* Debug */,
+				A9516744175795E50058E5B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9516762175795F40058E5B4 /* Build configuration list for PBXNativeTarget "aGlucose" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9516763175795F40058E5B4 /* Debug */,
+				A9516764175795F40058E5B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

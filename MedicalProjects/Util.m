@@ -12,7 +12,8 @@
 
 + (int)setVersion {
 #warning Implementare.
-    return 3;
+    //Controllo del target
+    return 1;
 }
 
 + (NSString *)data:(NSTimeInterval *)timeInterval {
