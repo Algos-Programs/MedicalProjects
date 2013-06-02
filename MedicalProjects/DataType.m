@@ -10,6 +10,10 @@
 
 @implementation DataType
 
+/**
+ Controlla se il valore passato come stringa (double Value)
+ @return TRUE - compreso tra 1 e 299 (inclusi)
+ */
 + (BOOL)checkValue:(NSString *)value {
     double doubleValue = [value doubleValue];
     if (doubleValue > 0 && doubleValue < 300) {
