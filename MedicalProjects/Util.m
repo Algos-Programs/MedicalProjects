@@ -10,10 +10,29 @@
 
 @implementation Util
 
+/**
+ @return 0 - if target UNRECOGNIZED 
+ @return 1 - if target is aWeight
+ @return 2 - if target is aGlucose
+ @return 3 - if target is aPressure
+ 
+ */
 + (int)setVersion {
-#warning Implementare.
-    //Controllo del target - Inserischi qui i dati Guido. 
-    return 2;
+int returnValue = 0;
+    
+#ifdef WEIGHT_VERSION
+    returnValue = 1;
+#endif
+    
+#ifdef GLUCOSE_VERSION
+    returnValue = 2;
+#endif
+
+#ifdef PRESSURE_VERSION
+    returnValue = 3;
+#endif
+
+    return returnValue;
 }
 
 + (NSString *)data:(NSTimeInterval *)timeInterval {

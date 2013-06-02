@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MedicalProjectsTests copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -48,6 +53,11 @@
 			<true/>
 		</dict>
 		<key>A980370D17458D3100F808C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A98B236E175B80DE00D96058</key>
 		<dict>
 			<key>primary</key>
 			<true/>

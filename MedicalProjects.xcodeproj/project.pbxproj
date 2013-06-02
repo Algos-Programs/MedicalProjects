@@ -107,12 +107,31 @@
 		A980372917458D5B00F808C3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372817458D5B00F808C3 /* Database.m */; };
 		A980372B17458DBA00F808C3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
 		A980372E1745909000F808C3 /* TestDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372D1745909000F808C3 /* TestDatabase.m */; };
+		A98B236D175B7C1800D96058 /* TestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B236C175B7C1800D96058 /* TestUtil.m */; };
+		A98B2372175B80DE00D96058 /* MedicalProjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A980371C17458D3100F808C3 /* MedicalProjectsTests.m */; };
+		A98B2373175B80DE00D96058 /* TestDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A980372D1745909000F808C3 /* TestDatabase.m */; };
+		A98B2374175B80DE00D96058 /* TestFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B51747A42900778D9C /* TestFirstViewController.m */; };
+		A98B2375175B80DE00D96058 /* TestDataType.m in Sources */ = {isa = PBXBuildFile; fileRef = A975140D17490EED0057D66D /* TestDataType.m */; };
+		A98B2376175B80DE00D96058 /* TestUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A98B236C175B7C1800D96058 /* TestUtil.m */; };
+		A98B2378175B80DE00D96058 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A915DB19174F8DF500A33103 /* libsqlite3.dylib */; };
+		A98B2379175B80DE00D96058 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
+		A98B237A175B80DE00D96058 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A980370F17458D3100F808C3 /* SenTestingKit.framework */; };
+		A98B237B175B80DE00D96058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
+		A98B237C175B80DE00D96058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
+		A98B237E175B80DE00D96058 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A980371817458D3100F808C3 /* InfoPlist.strings */; };
 		A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 		A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A980371317458D3100F808C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98036D517458D3100F808C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98036DC17458D3100F808C3;
+			remoteInfo = MedicalProjects;
+		};
+		A98B2370175B80DE00D96058 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A98036D517458D3100F808C3 /* Project object */;
 			proxyType = 1;
@@ -174,6 +193,10 @@
 		A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A980372C1745909000F808C3 /* TestDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDatabase.h; sourceTree = "<group>"; };
 		A980372D1745909000F808C3 /* TestDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDatabase.m; sourceTree = "<group>"; };
+		A98B236B175B7C1800D96058 /* TestUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtil.h; sourceTree = "<group>"; };
+		A98B236C175B7C1800D96058 /* TestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtil.m; sourceTree = "<group>"; };
+		A98B2383175B80DE00D96058 /* MedicalProjectsTests copy.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MedicalProjectsTests copy.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98B2384175B80DE00D96058 /* MedicalProjectsTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjectsTests copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjectsTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		A9FC269117524AAE002459FA /* DatabaseGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseGeneral.h; sourceTree = "<group>"; };
 		A9FC269217524AAE002459FA /* DatabaseGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseGeneral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +258,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98B2377175B80DE00D96058 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B2378175B80DE00D96058 /* libsqlite3.dylib in Frameworks */,
+				A98B2379175B80DE00D96058 /* libsqlite3.0.dylib in Frameworks */,
+				A98B237A175B80DE00D96058 /* SenTestingKit.framework in Frameworks */,
+				A98B237B175B80DE00D96058 /* UIKit.framework in Frameworks */,
+				A98B237C175B80DE00D96058 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -293,6 +328,8 @@
 			children = (
 				A975140C17490EED0057D66D /* TestDataType.h */,
 				A975140D17490EED0057D66D /* TestDataType.m */,
+				A98B236B175B7C1800D96058 /* TestUtil.h */,
+				A98B236C175B7C1800D96058 /* TestUtil.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -309,6 +346,7 @@
 				A91346B31747A1A700778D9C /* MedicalProjects copy-Info.plist */,
 				A9516746175795E60058E5B4 /* MedicalProjects copy2-Info.plist */,
 				A9516766175795F40058E5B4 /* MedicalProjects copy3-Info.plist */,
+				A98B2384175B80DE00D96058 /* MedicalProjectsTests copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +358,7 @@
 				A91346B21747A1A700778D9C /* MedicalProjects copy.app */,
 				A9516745175795E50058E5B4 /* MedicalProjects copy.app */,
 				A9516765175795F40058E5B4 /* MedicalProjects copy.app */,
+				A98B2383175B80DE00D96058 /* MedicalProjectsTests copy.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -492,6 +531,25 @@
 			productReference = A980370E17458D3100F808C3 /* MedicalProjectsTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		A98B236E175B80DE00D96058 /* aWeightsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98B2380175B80DE00D96058 /* Build configuration list for PBXNativeTarget "aWeightsTests" */;
+			buildPhases = (
+				A98B2371175B80DE00D96058 /* Sources */,
+				A98B2377175B80DE00D96058 /* Frameworks */,
+				A98B237D175B80DE00D96058 /* Resources */,
+				A98B237F175B80DE00D96058 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98B236F175B80DE00D96058 /* PBXTargetDependency */,
+			);
+			name = aWeightsTests;
+			productName = MedicalProjectsTests;
+			productReference = A98B2383175B80DE00D96058 /* MedicalProjectsTests copy.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -518,6 +576,7 @@
 				A91346991747A1A700778D9C /* aWeights */,
 				A9516727175795E50058E5B4 /* aPressure */,
 				A9516747175795F40058E5B4 /* aGlucose */,
+				A98B236E175B80DE00D96058 /* aWeightsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -595,10 +654,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A98B237D175B80DE00D96058 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B237E175B80DE00D96058 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		A980370C17458D3100F808C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		A98B237F175B80DE00D96058 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -690,6 +770,19 @@
 				A980372E1745909000F808C3 /* TestDatabase.m in Sources */,
 				A91346B61747A42900778D9C /* TestFirstViewController.m in Sources */,
 				A975140E17490EED0057D66D /* TestDataType.m in Sources */,
+				A98B236D175B7C1800D96058 /* TestUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98B2371175B80DE00D96058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98B2372175B80DE00D96058 /* MedicalProjectsTests.m in Sources */,
+				A98B2373175B80DE00D96058 /* TestDatabase.m in Sources */,
+				A98B2374175B80DE00D96058 /* TestFirstViewController.m in Sources */,
+				A98B2375175B80DE00D96058 /* TestDataType.m in Sources */,
+				A98B2376175B80DE00D96058 /* TestUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +793,11 @@
 			isa = PBXTargetDependency;
 			target = A98036DC17458D3100F808C3 /* MedicalProjects */;
 			targetProxy = A980371317458D3100F808C3 /* PBXContainerItemProxy */;
+		};
+		A98B236F175B80DE00D96058 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98036DC17458D3100F808C3 /* MedicalProjects */;
+			targetProxy = A98B2370175B80DE00D96058 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -762,6 +860,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "PRESSURE_VERSION=1";
 				INFOPLIST_FILE = "MedicalProjects copy2-Info.plist";
 				PRODUCT_NAME = "MedicalProjects copy";
 				WRAPPER_EXTENSION = app;
@@ -773,6 +872,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "PRESSURE_VERSION=1";
 				INFOPLIST_FILE = "MedicalProjects copy2-Info.plist";
 				PRODUCT_NAME = "MedicalProjects copy";
 				WRAPPER_EXTENSION = app;
@@ -784,6 +884,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "GLUCOSE_VERSION=1";
 				INFOPLIST_FILE = "MedicalProjects copy3-Info.plist";
 				PRODUCT_NAME = "MedicalProjects copy";
 				WRAPPER_EXTENSION = app;
@@ -795,6 +896,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "GLUCOSE_VERSION=1";
 				INFOPLIST_FILE = "MedicalProjects copy3-Info.plist";
 				PRODUCT_NAME = "MedicalProjects copy";
 				WRAPPER_EXTENSION = app;
@@ -913,6 +1015,42 @@
 			};
 			name = Release;
 		};
+		A98B2381175B80DE00D96058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedicalProjects.app/MedicalProjects";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "WEIGHT_VERSION=1";
+				INFOPLIST_FILE = "MedicalProjectsTests copy-Info.plist";
+				PRODUCT_NAME = "MedicalProjectsTests copy";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A98B2382175B80DE00D96058 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MedicalProjects.app/MedicalProjects";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MedicalProjects/MedicalProjects-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "WEIGHT_VERSION=1";
+				INFOPLIST_FILE = "MedicalProjectsTests copy-Info.plist";
+				PRODUCT_NAME = "MedicalProjectsTests copy";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -966,6 +1104,15 @@
 			buildConfigurations = (
 				A980372417458D3100F808C3 /* Debug */,
 				A980372517458D3100F808C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98B2380175B80DE00D96058 /* Build configuration list for PBXNativeTarget "aWeightsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98B2381175B80DE00D96058 /* Debug */,
+				A98B2382175B80DE00D96058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
