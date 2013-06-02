@@ -21,14 +21,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtc-XZ-WWG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VTu-8D-UbL"/>
+                                    <constraint firstAttribute="width" constant="73" id="gXJ-w4-BFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Button">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="qtc-XZ-WWG" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="135" id="00c-m2-0yy"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="top" secondItem="16" secondAttribute="top" constant="143" id="1Rl-dZ-N3h"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="B2g-iS-eg8"/>
                             <constraint firstAttribute="trailing" secondItem="NZF-hE-9ch" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="W2T-Gu-Je8"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZOm-H3-yEN"/>
+                            <constraint firstAttribute="bottom" secondItem="qtc-XZ-WWG" secondAttribute="bottom" constant="113" id="axn-0y-OHJ"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="gFe-M2-yVI"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="if1-Dq-iGO"/>
                         </constraints>
