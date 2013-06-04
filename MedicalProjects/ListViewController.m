@@ -80,7 +80,6 @@ static NSString *key_value;
     
     // Configure the cell...
     
-    
     NSDictionary *tempDic = [[NSDictionary alloc] init];
     tempDic = [values objectAtIndex:indexPath.row];
 
@@ -94,7 +93,20 @@ static NSString *key_value;
     labelData.text = [Util data:&timeInterval];
     cell.detailTextLabel.text = labelData.text;
     //[cell addSubview:labelData];
-
+    
+    UIImage *image;
+    if ([[tempDic valueForKey:KEY_TYPE] intValue] == 1) {
+        image = [UIImage imageNamed:@"OvalNero.png"];
+    }
+    else if ([[tempDic valueForKey:KEY_TYPE] intValue]== 2) {
+        image = [UIImage imageNamed:@"OvalBlue.png"];
+    }
+    else if ([[tempDic valueForKey:KEY_TYPE] intValue] == 3) {
+        image = [UIImage imageNamed:@"OvalRed.png"];
+    }
+    
+    cell.image = image;
+    
     return cell;
 }
 
