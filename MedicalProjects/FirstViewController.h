@@ -10,13 +10,14 @@
 
 @interface FirstViewController : UIViewController
 
-
+#pragma mark - Generali
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 - (IBAction)pressOnScreen:(id)sender;
 - (IBAction)swipeOnScreen:(id)sender;
 
-///GLICEMIA
+#pragma mark - Glicemia
 
 @property (weak, nonatomic) IBOutlet UIButton *buttonBasale;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPreprandiale;

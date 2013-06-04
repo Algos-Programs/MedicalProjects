@@ -125,6 +125,7 @@
                         <outlet property="buttonBasale" destination="XEH-wG-6XR" id="6tt-KW-qJx"/>
                         <outlet property="buttonPostprandiale" destination="dVj-dY-KsC" id="Orb-TM-cDI"/>
                         <outlet property="buttonPreprandiale" destination="hYW-Ra-RdW" id="K7S-nq-ZAz"/>
+                        <outlet property="navigationBar" destination="c9y-tC-99u" id="xT1-D8-sEz"/>
                         <outlet property="textField" destination="NZF-hE-9ch" id="eUB-fh-oUp"/>
                     </connections>
                 </viewController>

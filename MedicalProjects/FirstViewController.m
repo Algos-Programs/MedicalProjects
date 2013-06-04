@@ -96,7 +96,7 @@ static int version = -1;
     [self.buttonPostprandiale setHidden:NO];
     [self.buttonPreprandiale setHidden:NO];
     
-    
+    //TODO: Inserire il titolo della navigation bar.
 }
 
 //****************************
@@ -162,12 +162,56 @@ static int version = -1;
 
 }
 
+///Inserisce il valore della glicemia BASALE nel db.
 - (IBAction)pressButtonBasale:(id)sender {
+    NSString *str = self.textField.text;
+    
+    if ([DataType checkValue:str]) { // Controllo correttezza del valore.
+        Database *db = [[Database alloc] init];
+        if(![db insertGlicosicBasale:[str doubleValue] withDate:[[NSDate date] timeIntervalSince1970]]){ // Controllo inserimento corretto del valore.
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
 }
 
+///Inserisce il valore della glicemia PREPRANDIALE presa dal textfield nel db.
 - (IBAction)pressButtonPreprandiale:(id)sender {
+    NSString *str = self.textField.text;
+    
+    if ([DataType checkValue:str]) { // Controllo correttezza del valore.
+        Database *db = [[Database alloc] init];
+        if(![db insertGlicosicPreprandiale:[str doubleValue] withDate:[[NSDate date] timeIntervalSince1970]]){ // Controllo inserimento corretto del valore.
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+
 }
 
+///Inserisce il valore della glicemia POSTRANDIALE presa dal textfield nel db.
 - (IBAction)pressButtonPostprandiale:(id)sender {
+    NSString *str = self.textField.text;
+    
+    if ([DataType checkValue:str]) { // Controllo correttezza del valore.
+        Database *db = [[Database alloc] init];
+        if(![db insertGlicosicPostprandiale:[str doubleValue] withDate:[[NSDate date] timeIntervalSince1970]]){ // Controllo inserimento corretto del valore.
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è stato salvato" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+    }
+    else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+
 }
 @end
