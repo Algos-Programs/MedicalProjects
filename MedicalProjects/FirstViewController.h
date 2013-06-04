@@ -15,4 +15,15 @@
 
 - (IBAction)pressOnScreen:(id)sender;
 - (IBAction)swipeOnScreen:(id)sender;
+
+///GLICEMIA
+
+@property (weak, nonatomic) IBOutlet UIButton *buttonBasale;
+@property (weak, nonatomic) IBOutlet UIButton *buttonPreprandiale;
+@property (weak, nonatomic) IBOutlet UIButton *buttonPostprandiale;
+
+- (IBAction)pressButtonBasale:(id)sender;
+- (IBAction)pressButtonPreprandiale:(id)sender;
+- (IBAction)pressButtonPostprandiale:(id)sender;
+
 @end

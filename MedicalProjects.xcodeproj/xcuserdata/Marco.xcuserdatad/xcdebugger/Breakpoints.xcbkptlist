@@ -65,8 +65,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "14"
          endingLineNumber = "14"
-         landmarkName = "+checkValue:"
-         landmarkType = "5">
+         landmarkName = "@implementation DataType"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -78,8 +78,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "15"
          endingLineNumber = "15"
-         landmarkName = "+checkValue:"
-         landmarkType = "5">
+         landmarkName = "@implementation DataType"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -238,24 +238,11 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MedicalProjects/FirstViewController.m"
-         timestampString = "391872168.820256"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
-         landmarkName = "-setVersion"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "MedicalProjects/FirstViewController.m"
-         timestampString = "391872170.180519"
+         timestampString = "392064746.714535"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "52"
@@ -264,7 +251,20 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "MedicalProjects/FirstViewController.m"
+         timestampString = "392064746.714535"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "68"
+         endingLineNumber = "68"
+         landmarkName = "-setVersion"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "MedicalProjects/Util.m"

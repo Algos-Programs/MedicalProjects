@@ -16,6 +16,7 @@
 
 - (int)setVersion;
 - (void)prepareViewWeight;
+- (void)prepareViewGlucose;
 - (void)keyboardDown;
 
 - (IBAction)pressButtonSave:(id)sender;
@@ -29,7 +30,6 @@ static int version = -1;
 {
     [super viewDidLoad];
     [self setVersion];
-    [self prepareViewWeight];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +49,22 @@ static int version = -1;
  */
 - (int)setVersion {
     version = [Util setVersion];
+    switch (version) {
+        case 1:
+            [self prepareViewWeight];
+            break;
+        case 2:
+            [self prepareViewGlucose];
+            break;
+            
+        case 3:
+            break;
+            
+        default:
+            //ERRORE.
+            break;
+    }
+    
     return version;
 }
 
@@ -59,6 +75,11 @@ static int version = -1;
 
 /// Inserisce i componenti nella view.
 - (void)prepareViewWeight {
+    
+    [self.buttonBasale setHidden:YES];
+    [self.buttonPreprandiale setHidden:YES];
+    [self.buttonPostprandiale setHidden:YES];
+    
     UIButton *bottom = [WeightView button];
     [bottom addTarget:self action:@selector(pressButtonSave:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:bottom];
@@ -67,6 +88,15 @@ static int version = -1;
     //[self.view addSubview:[WeightView myTextField]];
     [self.view addSubview:[WeightView titleLabel]];
     [self.view addSubview:[WeightView dataLabel]];
+}
+
+///Inserisce i componenti per la vista glucose.
+- (void)prepareViewGlucose {
+    [self.buttonBasale setHidden:NO];
+    [self.buttonPostprandiale setHidden:NO];
+    [self.buttonPreprandiale setHidden:NO];
+    
+    
 }
 
 //****************************
@@ -130,5 +160,14 @@ static int version = -1;
 - (IBAction)swipeOnScreen:(id)sender {
     [self keyboardDown];
 
+}
+
+- (IBAction)pressButtonBasale:(id)sender {
+}
+
+- (IBAction)pressButtonPreprandiale:(id)sender {
+}
+
+- (IBAction)pressButtonPostprandiale:(id)sender {
 }
 @end

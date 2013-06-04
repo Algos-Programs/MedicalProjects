@@ -13,43 +13,107 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="c9y-tC-99u">
+                                <color key="backgroundColor" red="0.2042823607" green="0.61377870560000003" blue="0.070508968379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.2042823607" green="0.61377870560000003" blue="0.070508968379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="meq-o3-8Sc"/>
+                                    <navigationItem title="Medical Project" id="meq-o3-8Sc"/>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NZF-hE-9ch">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtc-XZ-WWG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVj-dY-KsC">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="VTu-8D-UbL"/>
-                                    <constraint firstAttribute="width" constant="73" id="gXJ-w4-BFB"/>
+                                    <constraint firstAttribute="height" constant="46" id="T19-EU-Bl3"/>
+                                    <constraint firstAttribute="width" constant="267" id="YTR-3x-OvU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal">
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" backgroundImage="VerginButton.png">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Button">
+                                        <fragment content="Postprandiale">
                                             <attributes>
-                                                <color key="NSColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                <font key="NSFont" size="27" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonPostprandiale:" destination="2" eventType="touchUpInside" id="SDu-Xh-eSP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYW-Ra-RdW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="yXQ-6F-ric"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" backgroundImage="VerginButton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Preprandiale">
+                                            <attributes>
+                                                <font key="NSFont" size="27" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonPreprandiale:" destination="2" eventType="touchUpInside" id="wcm-2e-zXN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEH-wG-6XR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Exs-lb-H41"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" backgroundImage="VerginButton.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Basale">
+                                            <attributes>
+                                                <font key="NSFont" size="27" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressButtonBasale:" destination="2" eventType="touchUpInside" id="B15-EX-tVE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="qtc-XZ-WWG" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="135" id="00c-m2-0yy"/>
-                            <constraint firstItem="NZF-hE-9ch" firstAttribute="top" secondItem="16" secondAttribute="top" constant="143" id="1Rl-dZ-N3h"/>
+                            <constraint firstItem="dVj-dY-KsC" firstAttribute="leading" secondItem="hYW-Ra-RdW" secondAttribute="leading" type="default" id="3ri-eF-IKa"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="B2g-iS-eg8"/>
-                            <constraint firstAttribute="trailing" secondItem="NZF-hE-9ch" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="W2T-Gu-Je8"/>
+                            <constraint firstItem="NZF-hE-9ch" firstAttribute="top" secondItem="16" secondAttribute="top" constant="103" id="OSx-Di-3G9"/>
+                            <constraint firstItem="dVj-dY-KsC" firstAttribute="trailing" secondItem="hYW-Ra-RdW" secondAttribute="trailing" type="default" id="VXw-O7-34t"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZOm-H3-yEN"/>
-                            <constraint firstAttribute="bottom" secondItem="qtc-XZ-WWG" secondAttribute="bottom" constant="113" id="axn-0y-OHJ"/>
+                            <constraint firstItem="hYW-Ra-RdW" firstAttribute="leading" secondItem="XEH-wG-6XR" secondAttribute="leading" type="default" id="cgS-uq-aYi"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="gFe-M2-yVI"/>
-                            <constraint firstItem="c9y-tC-99u" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="if1-Dq-iGO"/>
+                            <constraint firstItem="hYW-Ra-RdW" firstAttribute="top" secondItem="XEH-wG-6XR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gv7-Kk-6WP"/>
+                            <constraint firstItem="dVj-dY-KsC" firstAttribute="centerX" secondItem="NZF-hE-9ch" secondAttribute="centerX" type="default" id="i4h-aR-gf0"/>
+                            <constraint firstItem="dVj-dY-KsC" firstAttribute="top" secondItem="hYW-Ra-RdW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jII-Fu-avM"/>
+                            <constraint firstAttribute="trailing" secondItem="NZF-hE-9ch" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mce-V5-Fjv"/>
+                            <constraint firstItem="dVj-dY-KsC" firstAttribute="centerX" secondItem="c9y-tC-99u" secondAttribute="centerX" type="default" id="mxO-2t-RzV"/>
+                            <constraint firstItem="hYW-Ra-RdW" firstAttribute="trailing" secondItem="XEH-wG-6XR" secondAttribute="trailing" type="default" id="swR-Ey-URy"/>
+                            <constraint firstItem="XEH-wG-6XR" firstAttribute="top" secondItem="16" secondAttribute="top" constant="154" id="wD4-GZ-ERI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Skg-Pp-IbL" appends="YES" id="78Q-35-fex"/>
@@ -58,6 +122,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
                     <connections>
+                        <outlet property="buttonBasale" destination="XEH-wG-6XR" id="6tt-KW-qJx"/>
+                        <outlet property="buttonPostprandiale" destination="dVj-dY-KsC" id="Orb-TM-cDI"/>
+                        <outlet property="buttonPreprandiale" destination="hYW-Ra-RdW" id="K7S-nq-ZAz"/>
                         <outlet property="textField" destination="NZF-hE-9ch" id="eUB-fh-oUp"/>
                     </connections>
                 </viewController>
@@ -189,29 +256,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="VerginButton.png" width="262" height="130"/>
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="FirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pressButtonSave:"/>
-                <relationship kind="action" name="pressOnScreen:"/>
-                <relationship kind="action" name="swipeOnScreen:"/>
-                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
