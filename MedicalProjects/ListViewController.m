@@ -37,15 +37,15 @@ static NSString *key_value;
     values = [[NSArray alloc] init];
     
     //-- Weight Version
-    if ([Util setVersion] == 1) {
+    if ([Util version] == 1) {
         values = [db objectsFromWeight];
         key_value = KEY_WEIGHT;
     }
-    if ([Util setVersion] == 2) {
+    if ([Util version] == 2) {
         values = [db objectsFromGliocosic];
         key_value = KEY_VALUE;
     }
-    if ([Util setVersion] == 3) {
+    if ([Util version] == 3) {
         values = [db objectsFromPressures];
         key_value = KEY_VALUE;
     }
@@ -72,6 +72,7 @@ static NSString *key_value;
     return values.count;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -92,20 +93,22 @@ static NSString *key_value;
     double timeInterval = [[tempDic objectForKey:KEY_DATA] doubleValue];
     labelData.text = [Util data:&timeInterval];
     cell.detailTextLabel.text = labelData.text;
-    //[cell addSubview:labelData];
-    
-    UIImage *image;
-    if ([[tempDic valueForKey:KEY_TYPE] intValue] == 1) {
-        image = [UIImage imageNamed:@"OvalNero.png"];
+
+    int version = [Util version];
+    switch (version) {
+        case PESO:
+            //
+            break;
+            
+        case GLICEMIA:
+            [self setImageForGlicemia:tempDic cell:cell];
+            break;
+        case PRESSIONE:
+            //
+            break;
+        default:
+            break;
     }
-    else if ([[tempDic valueForKey:KEY_TYPE] intValue]== 2) {
-        image = [UIImage imageNamed:@"OvalBlue.png"];
-    }
-    else if ([[tempDic valueForKey:KEY_TYPE] intValue] == 3) {
-        image = [UIImage imageNamed:@"OvalRed.png"];
-    }
-    
-    cell.image = image;
     
     return cell;
 }
@@ -160,6 +163,31 @@ static NSString *key_value;
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)setImageForGlicemia:(NSDictionary *)tempDic cell:(UITableViewCell *)cell
+{
+    UIImage *image;
+    int value = [[tempDic valueForKey:KEY_TYPE] intValue];
+    switch (value) {
+        case BASALAE:
+            image = [UIImage imageNamed:@"OvalNero.png"];
+            break;
+            
+        case PREPRANDIALE:
+            image = [UIImage imageNamed:@"OvalBlue.png"];
+            break;
+            
+        case POSTPRANDIALE:
+            image = [UIImage imageNamed:@"OvalRed.png"];
+            break;
+            
+        default:
+            image = [UIImage imageNamed:@"OvalError.png"];
+            break;
+    }
+    
+    cell.image = image;
 }
 
 @end

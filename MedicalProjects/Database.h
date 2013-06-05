@@ -27,6 +27,12 @@ static NSString * const KEY_TYPE = @"Tipo"; //Tipo di glicemia 1 - Basale / 2 - 
 
 @end
 
+typedef enum {
+    BASALAE = 1,
+    PREPRANDIALE = 2,
+    POSTPRANDIALE = 3,
+} TypeGliocos;
+
 @interface Database : NSObject {
     
     sqlite3 *db;

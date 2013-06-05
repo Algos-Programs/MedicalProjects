@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    PESO = 1,
+    GLICEMIA = 2,
+    PRESSIONE = 3,
+}TypeApp;
+
 @interface Util : NSObject
 
-+ (int)setVersion;
++ (int)version;
 
 + (NSString *)data:(NSTimeInterval *)timeInterval;
 

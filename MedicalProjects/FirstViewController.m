@@ -48,7 +48,7 @@ static int version = -1;
  @return -1 se non riconosce la versione.
  */
 - (int)setVersion {
-    version = [Util setVersion];
+    version = [Util version];
     switch (version) {
         case 1:
             [self prepareViewWeight];
@@ -58,6 +58,7 @@ static int version = -1;
             break;
             
         case 3:
+            
             break;
             
         default:

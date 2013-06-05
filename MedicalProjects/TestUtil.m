@@ -12,7 +12,7 @@
 @implementation TestUtil
 
 - (void)testSetVersion {
-    int value = [Util setVersion];
+    int value = [Util version];
     NSAssert(value != 0, @"1 - Valore uguale a 0");
 }
 @end

@@ -191,6 +191,14 @@
 		A98B237B175B80DE00D96058 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E017458D3100F808C3 /* UIKit.framework */; };
 		A98B237C175B80DE00D96058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98036E217458D3100F808C3 /* Foundation.framework */; };
 		A98B237E175B80DE00D96058 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A980371817458D3100F808C3 /* InfoPlist.strings */; };
+		A9CA4707175F777F00A939BF /* OvalError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4705175F777F00A939BF /* OvalError@2x.png */; };
+		A9CA4708175F777F00A939BF /* OvalError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4705175F777F00A939BF /* OvalError@2x.png */; };
+		A9CA4709175F777F00A939BF /* OvalError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4705175F777F00A939BF /* OvalError@2x.png */; };
+		A9CA470A175F777F00A939BF /* OvalError@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4705175F777F00A939BF /* OvalError@2x.png */; };
+		A9CA470B175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
+		A9CA470C175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
+		A9CA470D175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
+		A9CA470E175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
 		A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 		A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 /* End PBXBuildFile section */
@@ -287,6 +295,8 @@
 		A98B236C175B7C1800D96058 /* TestUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtil.m; sourceTree = "<group>"; };
 		A98B2383175B80DE00D96058 /* MedicalProjectsTests copy.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MedicalProjectsTests copy.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98B2384175B80DE00D96058 /* MedicalProjectsTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjectsTests copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjectsTests copy-Info.plist"; sourceTree = "<absolute>"; };
+		A9CA4705175F777F00A939BF /* OvalError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OvalError@2x.png"; sourceTree = "<group>"; };
+		A9CA4706175F777F00A939BF /* OvalError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OvalError.png; sourceTree = "<group>"; };
 		A9FC269117524AAE002459FA /* DatabaseGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseGeneral.h; sourceTree = "<group>"; };
 		A9FC269217524AAE002459FA /* DatabaseGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseGeneral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -398,12 +408,7 @@
 				A973B752175E7685008251AA /* OLD */,
 				A973B740175E57AF008251AA /* VerginButton.png */,
 				A973B741175E57AF008251AA /* VerginButton@2x.png */,
-				A973B753175E769E008251AA /* OvalNero@2x.png */,
-				A973B754175E769E008251AA /* OvalNero.png */,
-				A973B75D175E78D2008251AA /* OvalBlue.png */,
-				A973B75E175E78D2008251AA /* OvalBlue@2x.png */,
-				A973B75F175E78D2008251AA /* OvalRed.png */,
-				A973B760175E78D2008251AA /* OvalRed@2x.png */,
+				A9CA4704175F777200A939BF /* OVAL */,
 			);
 			name = Bottoni;
 			sourceTree = "<group>";
@@ -571,6 +576,21 @@
 				A980372D1745909000F808C3 /* TestDatabase.m */,
 			);
 			name = Database;
+			sourceTree = "<group>";
+		};
+		A9CA4704175F777200A939BF /* OVAL */ = {
+			isa = PBXGroup;
+			children = (
+				A9CA4705175F777F00A939BF /* OvalError@2x.png */,
+				A9CA4706175F777F00A939BF /* OvalError.png */,
+				A973B753175E769E008251AA /* OvalNero@2x.png */,
+				A973B754175E769E008251AA /* OvalNero.png */,
+				A973B75D175E78D2008251AA /* OvalBlue.png */,
+				A973B75E175E78D2008251AA /* OvalBlue@2x.png */,
+				A973B75F175E78D2008251AA /* OvalRed.png */,
+				A973B760175E78D2008251AA /* OvalRed@2x.png */,
+			);
+			name = OVAL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -745,6 +765,8 @@
 				A973B766175E78D2008251AA /* OvalBlue@2x.png in Resources */,
 				A973B76A175E78D2008251AA /* OvalRed.png in Resources */,
 				A973B76E175E78D2008251AA /* OvalRed@2x.png in Resources */,
+				A9CA4708175F777F00A939BF /* OvalError@2x.png in Resources */,
+				A9CA470C175F777F00A939BF /* OvalError.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +801,8 @@
 				A973B767175E78D2008251AA /* OvalBlue@2x.png in Resources */,
 				A973B76B175E78D2008251AA /* OvalRed.png in Resources */,
 				A973B76F175E78D2008251AA /* OvalRed@2x.png in Resources */,
+				A9CA4709175F777F00A939BF /* OvalError@2x.png in Resources */,
+				A9CA470D175F777F00A939BF /* OvalError.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +837,8 @@
 				A973B768175E78D2008251AA /* OvalBlue@2x.png in Resources */,
 				A973B76C175E78D2008251AA /* OvalRed.png in Resources */,
 				A973B770175E78D2008251AA /* OvalRed@2x.png in Resources */,
+				A9CA470A175F777F00A939BF /* OvalError@2x.png in Resources */,
+				A9CA470E175F777F00A939BF /* OvalError.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +873,8 @@
 				A973B765175E78D2008251AA /* OvalBlue@2x.png in Resources */,
 				A973B769175E78D2008251AA /* OvalRed.png in Resources */,
 				A973B76D175E78D2008251AA /* OvalRed@2x.png in Resources */,
+				A9CA4707175F777F00A939BF /* OvalError@2x.png in Resources */,
+				A9CA470B175F777F00A939BF /* OvalError.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

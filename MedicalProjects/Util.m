@@ -17,7 +17,7 @@
  @return 3 - if target is aPressure
  
  */
-+ (int)setVersion {
++ (int)version {
 int returnValue = 0;
     
 #ifdef WEIGHT_VERSION
