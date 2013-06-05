@@ -312,6 +312,27 @@ Database *db;
     NSAssert(gliType == 1, @"4 - Press MIn %f != 1", gliType);
 }
 
+- (void)testObjectBASALEFromGliocosic {
+    [db createTableGlicosic];
+    [db insertGlicosicBasale:123 withDate:333];
+    NSArray *array = [db objectsBasaleFromGliocosic];
+    NSAssert(array.count == 1, @"1 - Valori non presi dal DB");
+    
+    NSDictionary *dic = [array objectAtIndex:0];
+    int index = [[dic valueForKey:@"id"] intValue];
+    NSAssert(index == 1, @"2 - Index differente - %i", index);
+    
+    double gliBasale = [[dic valueForKey:KEY_DATA] doubleValue];
+    NSAssert(gliBasale == 333, @"3 - Gli Basale %f != 333", gliBasale);
+    
+    double gliValue = [[dic valueForKey:KEY_VALUE] doubleValue];
+    NSAssert(gliValue == 123, @"4 - Press MIn %f != 123", gliValue);
+    
+    double gliType = [[dic valueForKey:KEY_TYPE] doubleValue];
+    NSAssert(gliType == 1, @"4 - Press MIn %f != 1", gliType);
+
+}
+
 @end
 
 

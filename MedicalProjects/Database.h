@@ -66,5 +66,8 @@ typedef enum {
 - (NSArray *)objectsFromWeight;
 - (NSArray *)objectsFromPressures;
 - (NSArray *)objectsFromGliocosic;
+- (NSArray *)objectsBasaleFromGliocosic;
+- (NSArray *)objectsPreprandialeFromGliocosic;
+- (NSArray *)objectsPostprandialeFromGliocosic;
 
 @end

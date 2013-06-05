@@ -12,5 +12,7 @@
     NSArray *values;
     
 }
+@property (weak, nonatomic) IBOutlet UISegmentedControl *selectedBar;
 
+- (IBAction)pressSelectedBar:(id)sender;
 @end

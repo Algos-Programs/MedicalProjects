@@ -11,10 +11,18 @@
 #import "Util.h"
 
 @interface ListViewController ()
-
+- (void)setViewForGlicemiaVersion:(Database *)db;
 @end
 
+
 @implementation ListViewController
+
+typedef enum {
+    TUTTI_BAR,
+    BASALE_BAR,
+    PREPRANDIALE_BAR,
+    POSTPRANDIALE_BAR,
+}typeSelectBar;
 
 static NSString *key_value;
 
@@ -37,21 +45,24 @@ static NSString *key_value;
     values = [[NSArray alloc] init];
     
     //-- Weight Version
-    if ([Util version] == 1) {
-        values = [db objectsFromWeight];
+    if ([Util version] == PESO) {
         key_value = KEY_WEIGHT;
+        values = [db objectsFromWeight];
+
     }
-    if ([Util version] == 2) {
-        values = [db objectsFromGliocosic];
+    if ([Util version] == GLICEMIA) {
+        //values = [db objectsFromGliocosic];
+        [self setViewForGlicemiaVersion:db];
         key_value = KEY_VALUE;
     }
-    if ([Util version] == 3) {
+    if ([Util version] == PRESSIONE) {
         values = [db objectsFromPressures];
         key_value = KEY_VALUE;
     }
     
     [self.tableView reloadData];
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -80,7 +91,23 @@ static NSString *key_value;
 
     
     // Configure the cell...
-    
+    int selectedTypeToView = self.selectedBar.selectedSegmentIndex;
+    switch (selectedTypeToView) {
+        case TUTTI_BAR:
+            //
+            break;
+        case BASALAE:
+            //
+            break;
+        case PREPRANDIALE:
+            //
+            break;
+        case POSTPRANDIALE:
+            //
+            break;
+        default:
+            break;
+    }
     NSDictionary *tempDic = [[NSDictionary alloc] init];
     tempDic = [values objectAtIndex:indexPath.row];
 
@@ -190,4 +217,27 @@ static NSString *key_value;
     cell.image = image;
 }
 
+- (void)setViewForGlicemiaVersion:(Database *)db {
+    int selectedTypeToView = self.selectedBar.selectedSegmentIndex;
+    switch (selectedTypeToView) {
+        case TUTTI_BAR:
+            values = [db objectsFromGliocosic];
+            break;
+        case BASALAE:
+            values = [db objectsBasaleFromGliocosic];
+            break;
+        case POSTPRANDIALE:
+            values = [db objectsPostprandialeFromGliocosic];
+            break;
+        case PREPRANDIALE:
+            values = [db objectsPreprandialeFromGliocosic];
+            break;
+        default:
+            break;
+    }
+}
+
+- (IBAction)pressSelectedBar:(id)sender {
+    [self viewWillAppear:YES];
+}
 @end
