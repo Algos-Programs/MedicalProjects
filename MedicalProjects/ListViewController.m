@@ -88,26 +88,6 @@ static NSString *key_value;
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-
-    
-    // Configure the cell...
-    int selectedTypeToView = self.selectedBar.selectedSegmentIndex;
-    switch (selectedTypeToView) {
-        case TUTTI_BAR:
-            //
-            break;
-        case BASALAE:
-            //
-            break;
-        case PREPRANDIALE:
-            //
-            break;
-        case POSTPRANDIALE:
-            //
-            break;
-        default:
-            break;
-    }
     NSDictionary *tempDic = [[NSDictionary alloc] init];
     tempDic = [values objectAtIndex:indexPath.row];
 
