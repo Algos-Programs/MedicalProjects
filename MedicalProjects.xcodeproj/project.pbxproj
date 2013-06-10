@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90F183F1765CA4A0041F931 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90F183E1765CA4A0041F931 /* DetailViewController.m */; };
+		A90F18401765CA4A0041F931 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90F183E1765CA4A0041F931 /* DetailViewController.m */; };
+		A90F18411765CA4A0041F931 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90F183E1765CA4A0041F931 /* DetailViewController.m */; };
+		A90F18421765CA4A0041F931 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A90F183E1765CA4A0041F931 /* DetailViewController.m */; };
 		A913469B1747A1A700778D9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036EC17458D3100F808C3 /* main.m */; };
 		A913469C1747A1A700778D9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036F017458D3100F808C3 /* AppDelegate.m */; };
 		A913469D1747A1A700778D9C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A98036FC17458D3100F808C3 /* FirstViewController.m */; };
@@ -221,6 +225,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A90F183D1765CA4A0041F931 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A90F183E1765CA4A0041F931 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A91346B21747A1A700778D9C /* MedicalProjects copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MedicalProjects copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91346B31747A1A700778D9C /* MedicalProjects copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjects copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjects copy-Info.plist"; sourceTree = "<absolute>"; };
 		A91346B41747A42900778D9C /* TestFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFirstViewController.h; sourceTree = "<group>"; };
@@ -380,6 +386,8 @@
 				A98036FC17458D3100F808C3 /* FirstViewController.m */,
 				A9751418174929F10057D66D /* ListViewController.h */,
 				A9751419174929F10057D66D /* ListViewController.m */,
+				A90F183D1765CA4A0041F931 /* DetailViewController.h */,
+				A90F183E1765CA4A0041F931 /* DetailViewController.m */,
 				A9751417174929BC0057D66D /* Tests */,
 			);
 			name = Controllers;
@@ -940,6 +948,7 @@
 				A975141B174929F20057D66D /* ListViewController.m in Sources */,
 				A975142017492A270057D66D /* Util.m in Sources */,
 				A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */,
+				A90F18401765CA4A0041F931 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +966,7 @@
 				A9516730175795E50058E5B4 /* ListViewController.m in Sources */,
 				A9516731175795E50058E5B4 /* Util.m in Sources */,
 				A9516732175795E50058E5B4 /* DatabaseGeneral.m in Sources */,
+				A90F18411765CA4A0041F931 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,6 +984,7 @@
 				A9516750175795F40058E5B4 /* ListViewController.m in Sources */,
 				A9516751175795F40058E5B4 /* Util.m in Sources */,
 				A9516752175795F40058E5B4 /* DatabaseGeneral.m in Sources */,
+				A90F18421765CA4A0041F931 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,6 +1002,7 @@
 				A975141A174929F20057D66D /* ListViewController.m in Sources */,
 				A975141F17492A270057D66D /* Util.m in Sources */,
 				A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */,
+				A90F183F1765CA4A0041F931 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

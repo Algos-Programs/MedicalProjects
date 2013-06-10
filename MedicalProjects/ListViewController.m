@@ -7,6 +7,7 @@
 //
 
 #import "ListViewController.h"
+#import "DetailViewController.h"
 #import "Database.h"
 #import "Util.h"
 
@@ -37,6 +38,7 @@ static NSString *key_value;
 
 - (void)viewDidLoad
 {
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     [super viewDidLoad];
 }
 
@@ -69,7 +71,9 @@ static NSString *key_value;
     // Dispose of any resources that can be recreated.
 }
 
+//*********************************
 #pragma mark - Table view data source
+//*********************************
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -159,21 +163,27 @@ static NSString *key_value;
 }
 */
 
+//*********************************
 #pragma mark - Table view delegate
+//*********************************
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    
+     DetailViewController *detailViewController = [[DetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
      // ...
      // Pass the selected object to the new view controller.
+    
+    detailViewController.value = [values objectAtIndex:indexPath.row];
      [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
 }
 
-- (void)setImageForGlicemia:(NSDictionary *)tempDic cell:(UITableViewCell *)cell
-{
+//*********************************
+#pragma mark - Impostazioni
+//*********************************
+
+- (void)setImageForGlicemia:(NSDictionary *)tempDic cell:(UITableViewCell *)cell {
     UIImage *image;
     int value = [[tempDic valueForKey:KEY_TYPE] intValue];
     switch (value) {
@@ -217,7 +227,12 @@ static NSString *key_value;
     }
 }
 
+//*********************************
+#pragma mark - Actions
+//*********************************
+
 - (IBAction)pressSelectedBar:(id)sender {
     [self viewWillAppear:YES];
 }
+
 @end
