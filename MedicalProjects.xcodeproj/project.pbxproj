@@ -303,6 +303,7 @@
 		A98B2384175B80DE00D96058 /* MedicalProjectsTests copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MedicalProjectsTests copy-Info.plist"; path = "/Users/Marco/Documents/MyProjects/MedicalProjects/MedicalProjectsTests copy-Info.plist"; sourceTree = "<absolute>"; };
 		A9CA4705175F777F00A939BF /* OvalError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OvalError@2x.png"; sourceTree = "<group>"; };
 		A9CA4706175F777F00A939BF /* OvalError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OvalError.png; sourceTree = "<group>"; };
+		A9E19B54176758E100F74FA2 /* po.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = po.m; sourceTree = "<group>"; };
 		A9FC269117524AAE002459FA /* DatabaseGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseGeneral.h; sourceTree = "<group>"; };
 		A9FC269217524AAE002459FA /* DatabaseGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseGeneral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -389,6 +390,7 @@
 				A90F183D1765CA4A0041F931 /* DetailViewController.h */,
 				A90F183E1765CA4A0041F931 /* DetailViewController.m */,
 				A9751417174929BC0057D66D /* Tests */,
+				A9E19B54176758E100F74FA2 /* po.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
