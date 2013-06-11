@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="VerginButton.png">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Postprandiale">
+                                        <fragment content="Post">
                                             <attributes>
                                                 <font key="NSFont" size="27" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -157,8 +157,8 @@
                             <segments>
                                 <segment title="Tutti" width="50"/>
                                 <segment title="Basale"/>
-                                <segment title="Preprandiale"/>
-                                <segment title="Postprandiale"/>
+                                <segment title="Pre"/>
+                                <segment title="Post"/>
                             </segments>
                             <color key="tintColor" red="0.2042823607" green="0.61377870560000003" blue="0.070508968379999995" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
