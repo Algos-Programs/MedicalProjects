@@ -231,10 +231,12 @@ static int version = -1;
 #pragma mark - PickerView Delegate
 //*********************************
 
+///In quante sezioni è diviso il pickerView.
 - (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 3;
 }
 
+///Numero di righe in ogni sezione del picker.
 - (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {    
     if (component == COMPONENT_BATTITO)
         return 81;
@@ -242,6 +244,7 @@ static int version = -1;
         return 121;
 }
 
+//// Il valore di ogni riga di ogni sezione del picker.
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title;
     switch (component) {
@@ -264,7 +267,14 @@ static int version = -1;
     return title;
 }
 
+//// Larghezza di ogni componen (sezione) del picker.
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
     return 100.0f;
 }
+
+/// Cosa avviene una volta che viene selezionata una riga.
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+}
+
 @end
