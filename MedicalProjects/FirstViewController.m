@@ -13,6 +13,7 @@
 #import "Costanti.h"
 #import "Util.h"
 
+
 @interface FirstViewController ()
 
 - (int)setVersion;
@@ -234,13 +235,31 @@ static int version = -1;
     return 3;
 }
 
-- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return 50;
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {    
+    if (component == COMPONENT_BATTITO)
+        return 81;
+    else
+        return 121;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title;
-    title = [@"" stringByAppendingFormat:@"%d",row];
+    switch (component) {
+        case COMPONENT_BATTITO: //40 - 120
+            title = [@"" stringByAppendingFormat:@"%d bpm",row + 40];
+            break;
+        
+        case COMPONENT_DIASTOLICA: //60-180
+            title = [@"" stringByAppendingFormat:@"%d mmHg",row + 60];
+            break;
+            
+        case COMPONENT_SISTOLICA: //massima
+            title = [@"" stringByAppendingFormat:@"%d mmHg",row + 60];
+            break;
+
+        default:
+            break;
+    }
     
     return title;
 }

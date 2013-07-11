@@ -14,6 +14,13 @@ typedef enum {
     TAGET_PRESSU,
 }TargetName;
 
+typedef enum {
+    COMPONENT_SISTOLICA,
+    COMPONENT_DIASTOLICA,
+    COMPONENT_BATTITO,
+}ComponentName;
+
+
 @interface Costanti : NSObject
 
 @end
