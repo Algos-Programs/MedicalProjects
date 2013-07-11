@@ -17,10 +17,11 @@ typedef enum {
 typedef enum {
     COMPONENT_SISTOLICA,
     COMPONENT_DIASTOLICA,
-    COMPONENT_BATTITO,
+    COMPONENT_FREQUENZA,
 }ComponentName;
 
 
 @interface Costanti : NSObject
+
 
 @end

@@ -28,7 +28,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVj-dY-KsC">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="T19-EU-Bl3"/>
-                                    <constraint firstAttribute="width" constant="267" id="YTR-3x-OvU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" backgroundImage="VerginButton.png">
@@ -76,6 +75,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XEH-wG-6XR">
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="Cbd-Nx-UkM"/>
                                     <constraint firstAttribute="height" constant="46" id="Exs-lb-H41"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
@@ -103,27 +103,63 @@
                                     <constraint firstAttribute="height" constant="216" id="O85-Q7-34d"/>
                                 </constraints>
                             </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sys" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHj-lH-vKu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtH-gE-rj4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="bpm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edg-gR-fow">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="JK8-pV-iI3">
+                                <items>
+                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="dO0-e7-4UP"/>
+                                    <barButtonItem title="SYS" style="plain" id="Dbs-iP-4xv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RK9-m4-7ZN"/>
+                                    <barButtonItem title="DIA" style="plain" id="dW7-T6-pr1"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4Hs-6n-Ieu"/>
+                                    <barButtonItem title="BPM" style="plain" id="Yta-Gq-xak"/>
+                                    <barButtonItem width="13" style="plain" systemItem="fixedSpace" id="qpN-3Q-wIf"/>
+                                </items>
+                                <color key="tintColor" red="0.2042823607" green="0.61377870560000003" blue="0.070508968379999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="JK8-pV-iI3" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="1Eg-YU-NJE"/>
                             <constraint firstItem="dVj-dY-KsC" firstAttribute="leading" secondItem="hYW-Ra-RdW" secondAttribute="leading" type="default" id="3ri-eF-IKa"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="centerX" secondItem="NZF-hE-9ch" secondAttribute="centerX" type="default" id="68a-g1-RSo"/>
+                            <constraint firstItem="JK8-pV-iI3" firstAttribute="bottom" secondItem="nn2-Eb-M4Y" secondAttribute="top" type="default" id="8Cq-ol-Csb"/>
                             <constraint firstItem="nn2-Eb-M4Y" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="Ai5-xD-rSD"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="B2g-iS-eg8"/>
+                            <constraint firstItem="Edg-gR-fow" firstAttribute="trailing" secondItem="hYW-Ra-RdW" secondAttribute="trailing" type="default" id="C1D-U6-d79"/>
+                            <constraint firstItem="Edg-gR-fow" firstAttribute="trailing" secondItem="dVj-dY-KsC" secondAttribute="trailing" type="default" id="DFG-OI-Kzl"/>
+                            <constraint firstItem="BtH-gE-rj4" firstAttribute="baseline" secondItem="aHj-lH-vKu" secondAttribute="baseline" type="default" id="E1q-Qd-R0O"/>
+                            <constraint firstItem="JK8-pV-iI3" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="IB1-ba-6xI"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="centerX" secondItem="XEH-wG-6XR" secondAttribute="centerX" type="default" id="Md5-EE-qyl"/>
-                            <constraint firstItem="nn2-Eb-M4Y" firstAttribute="centerX" secondItem="dVj-dY-KsC" secondAttribute="centerX" type="default" id="Nan-XY-ADa"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="top" secondItem="16" secondAttribute="top" constant="103" id="OSx-Di-3G9"/>
-                            <constraint firstItem="dVj-dY-KsC" firstAttribute="trailing" secondItem="hYW-Ra-RdW" secondAttribute="trailing" type="default" id="VXw-O7-34t"/>
+                            <constraint firstItem="JK8-pV-iI3" firstAttribute="bottom" secondItem="BtH-gE-rj4" secondAttribute="bottom" type="default" id="U0O-AX-F89"/>
+                            <constraint firstItem="aHj-lH-vKu" firstAttribute="top" secondItem="hYW-Ra-RdW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xof-KD-CEG"/>
                             <constraint firstItem="NZF-hE-9ch" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZOm-H3-yEN"/>
                             <constraint firstItem="hYW-Ra-RdW" firstAttribute="leading" secondItem="XEH-wG-6XR" secondAttribute="leading" type="default" id="cgS-uq-aYi"/>
+                            <constraint firstItem="JK8-pV-iI3" firstAttribute="centerX" secondItem="dVj-dY-KsC" secondAttribute="centerX" type="default" id="fYn-LW-g7M"/>
                             <constraint firstItem="c9y-tC-99u" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="gFe-M2-yVI"/>
                             <constraint firstItem="hYW-Ra-RdW" firstAttribute="top" secondItem="XEH-wG-6XR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gv7-Kk-6WP"/>
+                            <constraint firstItem="BtH-gE-rj4" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="122" id="hFU-F3-rrX"/>
                             <constraint firstItem="dVj-dY-KsC" firstAttribute="top" secondItem="hYW-Ra-RdW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jII-Fu-avM"/>
+                            <constraint firstItem="Edg-gR-fow" firstAttribute="baseline" secondItem="BtH-gE-rj4" secondAttribute="baseline" type="default" id="nVY-yY-bl9"/>
+                            <constraint firstItem="aHj-lH-vKu" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="7" id="nd3-qU-Vpz"/>
                             <constraint firstItem="nn2-Eb-M4Y" firstAttribute="bottom" secondItem="16" secondAttribute="bottom" type="default" id="rUq-ag-uNd"/>
                             <constraint firstItem="hYW-Ra-RdW" firstAttribute="trailing" secondItem="XEH-wG-6XR" secondAttribute="trailing" type="default" id="swR-Ey-URy"/>
                             <constraint firstItem="nn2-Eb-M4Y" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" type="default" id="uIc-g4-8jH"/>
-                            <constraint firstItem="XEH-wG-6XR" firstAttribute="top" secondItem="16" secondAttribute="top" constant="154" id="wD4-GZ-ERI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Skg-Pp-IbL" appends="YES" id="78Q-35-fex"/>
@@ -203,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZgO-N1-oUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="-132"/>
+            <point key="canvasLocation" x="1068" y="-133"/>
         </scene>
         <!--List View Controller - Root View Controller-->
         <scene sceneID="hw6-Ve-4tE">
@@ -486,6 +522,41 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="DetailViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+        </class>
+        <class className="FirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressButtonBasale:"/>
+                <relationship kind="action" name="pressButtonPostprandiale:"/>
+                <relationship kind="action" name="pressButtonPreprandiale:"/>
+                <relationship kind="action" name="pressButtonSave:"/>
+                <relationship kind="action" name="pressOnScreen:"/>
+                <relationship kind="action" name="swipeOnScreen:"/>
+                <relationship kind="outlet" name="buttonBasale" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonPostprandiale" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buttonPreprandiale" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pressSelectedBar:"/>
+                <relationship kind="outlet" name="selectedBar" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

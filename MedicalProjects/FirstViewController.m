@@ -238,7 +238,7 @@ static int version = -1;
 
 ///Numero di righe in ogni sezione del picker.
 - (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {    
-    if (component == COMPONENT_BATTITO)
+    if (component == COMPONENT_FREQUENZA)
         return 81;
     else
         return 121;
@@ -248,16 +248,16 @@ static int version = -1;
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSString *title;
     switch (component) {
-        case COMPONENT_BATTITO: //40 - 120
-            title = [@"" stringByAppendingFormat:@"%d bpm",row + 40];
+        case COMPONENT_FREQUENZA: //40 - 120
+            title = [@"" stringByAppendingFormat:@"%d",row + 40];
             break;
         
         case COMPONENT_DIASTOLICA: //60-180
-            title = [@"" stringByAppendingFormat:@"%d mmHg",row + 60];
+            title = [@"" stringByAppendingFormat:@"%d",row + 60];
             break;
             
         case COMPONENT_SISTOLICA: //massima
-            title = [@"" stringByAppendingFormat:@"%d mmHg",row + 60];
+            title = [@"" stringByAppendingFormat:@"%d",row + 60];
             break;
 
         default:
