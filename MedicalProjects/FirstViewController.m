@@ -31,6 +31,7 @@ static int version = -1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.pickerView setDelegate:self];
     [self setVersion];
 }
 
@@ -223,6 +224,28 @@ static int version = -1;
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione" message:@"Il valore inserito non è valido" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertView show];
     }
+}
 
+//*********************************
+#pragma mark - PickerView Delegate
+//*********************************
+
+- (int)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 3;
+}
+
+- (int)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 50;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *title;
+    title = [@"" stringByAppendingFormat:@"%d",row];
+    
+    return title;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    return 100.0f;
 }
 @end
