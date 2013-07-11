@@ -219,6 +219,10 @@
 		A9CA470C175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
 		A9CA470D175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
 		A9CA470E175F777F00A939BF /* OvalError.png in Resources */ = {isa = PBXBuildFile; fileRef = A9CA4706175F777F00A939BF /* OvalError.png */; };
+		A9E8F3DE178E96FC00290B3E /* Costanti.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E8F3DD178E96FC00290B3E /* Costanti.m */; };
+		A9E8F3DF178E96FC00290B3E /* Costanti.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E8F3DD178E96FC00290B3E /* Costanti.m */; };
+		A9E8F3E0178E96FC00290B3E /* Costanti.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E8F3DD178E96FC00290B3E /* Costanti.m */; };
+		A9E8F3E1178E96FC00290B3E /* Costanti.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E8F3DD178E96FC00290B3E /* Costanti.m */; };
 		A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 		A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9FC269217524AAE002459FA /* DatabaseGeneral.m */; };
 /* End PBXBuildFile section */
@@ -324,6 +328,8 @@
 		A9CA4705175F777F00A939BF /* OvalError@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OvalError@2x.png"; sourceTree = "<group>"; };
 		A9CA4706175F777F00A939BF /* OvalError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OvalError.png; sourceTree = "<group>"; };
 		A9E19B54176758E100F74FA2 /* po.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = po.m; sourceTree = "<group>"; };
+		A9E8F3DC178E96FC00290B3E /* Costanti.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Costanti.h; sourceTree = "<group>"; };
+		A9E8F3DD178E96FC00290B3E /* Costanti.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Costanti.m; sourceTree = "<group>"; };
 		A9FC269117524AAE002459FA /* DatabaseGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseGeneral.h; sourceTree = "<group>"; };
 		A9FC269217524AAE002459FA /* DatabaseGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseGeneral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -467,6 +473,8 @@
 		A975140717490E0C0057D66D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A9E8F3DC178E96FC00290B3E /* Costanti.h */,
+				A9E8F3DD178E96FC00290B3E /* Costanti.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -991,6 +999,7 @@
 				A975142017492A270057D66D /* Util.m in Sources */,
 				A9FC269417524AAE002459FA /* DatabaseGeneral.m in Sources */,
 				A90F18401765CA4A0041F931 /* DetailViewController.m in Sources */,
+				A9E8F3DF178E96FC00290B3E /* Costanti.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1018,7 @@
 				A9516731175795E50058E5B4 /* Util.m in Sources */,
 				A9516732175795E50058E5B4 /* DatabaseGeneral.m in Sources */,
 				A90F18411765CA4A0041F931 /* DetailViewController.m in Sources */,
+				A9E8F3E0178E96FC00290B3E /* Costanti.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1037,7 @@
 				A9516751175795F40058E5B4 /* Util.m in Sources */,
 				A9516752175795F40058E5B4 /* DatabaseGeneral.m in Sources */,
 				A90F18421765CA4A0041F931 /* DetailViewController.m in Sources */,
+				A9E8F3E1178E96FC00290B3E /* Costanti.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,6 +1056,7 @@
 				A975141F17492A270057D66D /* Util.m in Sources */,
 				A9FC269317524AAE002459FA /* DatabaseGeneral.m in Sources */,
 				A90F183F1765CA4A0041F931 /* DetailViewController.m in Sources */,
+				A9E8F3DE178E96FC00290B3E /* Costanti.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

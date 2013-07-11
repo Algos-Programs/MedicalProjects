@@ -9,6 +9,7 @@
 #import "ListViewController.h"
 #import "DetailViewController.h"
 #import "Database.h"
+#import "Costanti.h"
 #import "Util.h"
 
 @interface ListViewController ()
@@ -47,17 +48,17 @@ static NSString *key_value;
     values = [[NSArray alloc] init];
     
     //-- Weight Version
-    if ([Util version] == PESO) {
+    if ([Util version] == TAGET_WEIGHT) {
         key_value = KEY_WEIGHT;
         values = [db objectsFromWeight];
 
     }
-    if ([Util version] == GLICEMIA) {
+    if ([Util version] == TAGET_GLICEM) {
         //values = [db objectsFromGliocosic];
         [self setViewForGlicemiaVersion:db];
         key_value = KEY_VALUE;
     }
-    if ([Util version] == PRESSIONE) {
+    if ([Util version] == TAGET_PRESSU) {
         values = [db objectsFromPressures];
         key_value = KEY_VALUE;
     }
@@ -107,14 +108,14 @@ static NSString *key_value;
 
     int version = [Util version];
     switch (version) {
-        case PESO:
+        case TAGET_WEIGHT:
             //
             break;
             
-        case GLICEMIA:
+        case TAGET_GLICEM:
             [self setImageForGlicemia:tempDic cell:cell];
             break;
-        case PRESSIONE:
+        case TAGET_PRESSU:
             //
             break;
         default:

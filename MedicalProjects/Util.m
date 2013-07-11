@@ -7,6 +7,7 @@
 //
 
 #import "Util.h"
+#import "Costanti.h"
 
 @implementation Util
 
@@ -21,15 +22,15 @@
 int returnValue = 0;
     
 #ifdef WEIGHT_VERSION
-    returnValue = 1;
+    returnValue = TAGET_WEIGHT;
 #endif
     
 #ifdef GLUCOSE_VERSION
-    returnValue = 2;
+    returnValue = TAGET_GLICEM;
 #endif
 
 #ifdef PRESSURE_VERSION
-    returnValue = 3;
+    returnValue = TAGET_PRESSU;
 #endif
 
     return returnValue;

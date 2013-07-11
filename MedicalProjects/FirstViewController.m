@@ -10,6 +10,7 @@
 #import "WeightView.h"
 #import "DataType.h"
 #import "Database.h"
+#import "Costanti.h"
 #import "Util.h"
 
 @interface FirstViewController ()
@@ -50,15 +51,15 @@ static int version = -1;
 - (int)setVersion {
     version = [Util version];
     switch (version) {
-        case 1:
+        case TAGET_WEIGHT:
             [self prepareViewWeight];
             break;
-        case 2:
+        case TAGET_GLICEM:
             [self prepareViewGlucose];
             break;
             
-        case 3:
-            
+        case TAGET_PRESSU:
+            //
             break;
             
         default:
