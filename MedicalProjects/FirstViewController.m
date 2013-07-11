@@ -18,6 +18,7 @@
 - (int)setVersion;
 - (void)prepareViewWeight;
 - (void)prepareViewGlucose;
+- (void)prepareViewPressure;
 - (void)keyboardDown;
 
 - (IBAction)pressButtonSave:(id)sender;
@@ -59,7 +60,7 @@ static int version = -1;
             break;
             
         case TAGET_PRESSU:
-            //
+            [self prepareViewPressure];
             break;
             
         default:
@@ -81,6 +82,7 @@ static int version = -1;
     [self.buttonBasale setHidden:YES];
     [self.buttonPreprandiale setHidden:YES];
     [self.buttonPostprandiale setHidden:YES];
+    [self.pickerView setHidden:YES];
     
     UIButton *bottom = [WeightView button];
     [bottom addTarget:self action:@selector(pressButtonSave:) forControlEvents:UIControlEventTouchUpInside];
@@ -97,8 +99,15 @@ static int version = -1;
     [self.buttonBasale setHidden:NO];
     [self.buttonPostprandiale setHidden:NO];
     [self.buttonPreprandiale setHidden:NO];
+    [self.pickerView setHidden:YES];
     
     //TODO: Inserire il titolo della navigation bar.
+}
+
+- (void)prepareViewPressure {
+    [self.buttonBasale setHidden:YES];
+    [self.buttonPostprandiale setHidden:YES];
+    [self.buttonPreprandiale setHidden:YES];
 }
 
 //****************************
@@ -107,7 +116,7 @@ static int version = -1;
 
 /// Quando l'utente fa click su save. Salva il valore.
 - (IBAction)pressButtonSave:(id)sender {
-    if (version == 1) { //Weight
+    if (version == TAGET_WEIGHT) { //Weight
         NSString *str = self.textField.text;
         if ([DataType checkValue:str]) {
             Database *db = [[Database alloc] init];
@@ -122,7 +131,7 @@ static int version = -1;
         }
     }
     
-    if (version == 2) {
+    if (version == TAGET_GLICEM) {
         NSString *str = self.textField.text;
         if ([DataType checkValue:str]) {
             Database *db = [[Database alloc] init];
@@ -137,7 +146,7 @@ static int version = -1;
         }
     }
     
-    if (version == 3) {
+    if (version == TAGET_PRESSU) {
         NSString *str = self.textField.text;
         if ([DataType checkValue:str]) {
             Database *db = [[Database alloc] init];

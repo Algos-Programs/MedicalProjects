@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonBasale;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPreprandiale;
 @property (weak, nonatomic) IBOutlet UIButton *buttonPostprandiale;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 - (IBAction)pressButtonBasale:(id)sender;
 - (IBAction)pressButtonPreprandiale:(id)sender;
