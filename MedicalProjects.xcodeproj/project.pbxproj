@@ -34,6 +34,22 @@
 		A91346BB1747B19300778D9C /* WeightView.m in Sources */ = {isa = PBXBuildFile; fileRef = A91346B91747B19300778D9C /* WeightView.m */; };
 		A915DB18174F8DF500A33103 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A980372A17458DBA00F808C3 /* libsqlite3.0.dylib */; };
 		A915DB1A174F8DF500A33103 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A915DB19174F8DF500A33103 /* libsqlite3.dylib */; };
+		A92B7158176FC23600C0FA68 /* ButtonCalcola.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7156176FC23600C0FA68 /* ButtonCalcola.png */; };
+		A92B7159176FC23600C0FA68 /* ButtonCalcola.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7156176FC23600C0FA68 /* ButtonCalcola.png */; };
+		A92B715A176FC23600C0FA68 /* ButtonCalcola.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7156176FC23600C0FA68 /* ButtonCalcola.png */; };
+		A92B715B176FC23600C0FA68 /* ButtonCalcola.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7156176FC23600C0FA68 /* ButtonCalcola.png */; };
+		A92B715C176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */; };
+		A92B715D176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */; };
+		A92B715E176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */; };
+		A92B715F176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */; };
+		A92B7162176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */; };
+		A92B7163176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */; };
+		A92B7164176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */; };
+		A92B7165176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */; };
+		A92B7166176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */; };
+		A92B7167176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */; };
+		A92B7168176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */; };
+		A92B7169176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */ = {isa = PBXBuildFile; fileRef = A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */; };
 		A9412614175B87B500ED8FF6 /* B_Prepardiale.png in Resources */ = {isa = PBXBuildFile; fileRef = A9412612175B87B500ED8FF6 /* B_Prepardiale.png */; };
 		A9412615175B87B500ED8FF6 /* B_Prepardiale.png in Resources */ = {isa = PBXBuildFile; fileRef = A9412612175B87B500ED8FF6 /* B_Prepardiale.png */; };
 		A9412616175B87B500ED8FF6 /* B_Prepardiale.png in Resources */ = {isa = PBXBuildFile; fileRef = A9412612175B87B500ED8FF6 /* B_Prepardiale.png */; };
@@ -234,6 +250,10 @@
 		A91346B81747B19300778D9C /* WeightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightView.h; sourceTree = "<group>"; };
 		A91346B91747B19300778D9C /* WeightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightView.m; sourceTree = "<group>"; };
 		A915DB19174F8DF500A33103 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A92B7156176FC23600C0FA68 /* ButtonCalcola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonCalcola.png; sourceTree = "<group>"; };
+		A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonCalcola@2x.png"; sourceTree = "<group>"; };
+		A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonCalcolaV2@2x.png"; sourceTree = "<group>"; };
+		A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonCalcolaV2.png; sourceTree = "<group>"; };
 		A9412612175B87B500ED8FF6 /* B_Prepardiale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = B_Prepardiale.png; sourceTree = "<group>"; };
 		A9412613175B87B500ED8FF6 /* B_Prepardiale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B_Prepardiale@2x.png"; sourceTree = "<group>"; };
 		A941261C175B888700ED8FF6 /* Botton1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Botton1@2x.png"; sourceTree = "<group>"; };
@@ -415,6 +435,10 @@
 		A9412611175B87A400ED8FF6 /* Bottoni */ = {
 			isa = PBXGroup;
 			children = (
+				A92B7156176FC23600C0FA68 /* ButtonCalcola.png */,
+				A92B7157176FC23600C0FA68 /* ButtonCalcola@2x.png */,
+				A92B7160176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png */,
+				A92B7161176FC3C700C0FA68 /* ButtonCalcolaV2.png */,
 				A973B752175E7685008251AA /* OLD */,
 				A973B740175E57AF008251AA /* VerginButton.png */,
 				A973B741175E57AF008251AA /* VerginButton@2x.png */,
@@ -754,12 +778,14 @@
 				A91346A91747A1A700778D9C /* Default-568h@2x.png in Resources */,
 				A91346AA1747A1A700778D9C /* MainStoryboard.storyboard in Resources */,
 				A91346AB1747A1A700778D9C /* first.png in Resources */,
+				A92B7163176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */,
 				A91346AC1747A1A700778D9C /* first@2x.png in Resources */,
 				A91346AD1747A1A700778D9C /* second.png in Resources */,
 				A91346AE1747A1A700778D9C /* second@2x.png in Resources */,
 				A9412615175B87B500ED8FF6 /* B_Prepardiale.png in Resources */,
 				A9412619175B87B500ED8FF6 /* B_Prepardiale@2x.png in Resources */,
 				A941261F175B888700ED8FF6 /* Botton1@2x.png in Resources */,
+				A92B7167176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */,
 				A9412623175B888700ED8FF6 /* Botton1.png in Resources */,
 				A973B72D175E5654008251AA /* BasaleButton.png in Resources */,
 				A973B731175E5654008251AA /* BasaleButton@2x.png in Resources */,
@@ -767,8 +793,10 @@
 				A973B73B175E57A2008251AA /* PreprandialeButton@2x.png in Resources */,
 				A973B743175E57AF008251AA /* PostprandialeButton.png in Resources */,
 				A973B747175E57AF008251AA /* PostprandialeButton@2x.png in Resources */,
+				A92B715D176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */,
 				A973B74B175E57AF008251AA /* VerginButton.png in Resources */,
 				A973B74F175E57AF008251AA /* VerginButton@2x.png in Resources */,
+				A92B7159176FC23600C0FA68 /* ButtonCalcola.png in Resources */,
 				A973B756175E769E008251AA /* OvalNero@2x.png in Resources */,
 				A973B75A175E769E008251AA /* OvalNero.png in Resources */,
 				A973B762175E78D2008251AA /* OvalBlue.png in Resources */,
@@ -790,12 +818,14 @@
 				A951673C175795E50058E5B4 /* Default-568h@2x.png in Resources */,
 				A951673D175795E50058E5B4 /* MainStoryboard.storyboard in Resources */,
 				A951673E175795E50058E5B4 /* first.png in Resources */,
+				A92B7164176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */,
 				A951673F175795E50058E5B4 /* first@2x.png in Resources */,
 				A9516740175795E50058E5B4 /* second.png in Resources */,
 				A9516741175795E50058E5B4 /* second@2x.png in Resources */,
 				A9412616175B87B500ED8FF6 /* B_Prepardiale.png in Resources */,
 				A941261A175B87B500ED8FF6 /* B_Prepardiale@2x.png in Resources */,
 				A9412620175B888700ED8FF6 /* Botton1@2x.png in Resources */,
+				A92B7168176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */,
 				A9412624175B888700ED8FF6 /* Botton1.png in Resources */,
 				A973B72E175E5654008251AA /* BasaleButton.png in Resources */,
 				A973B732175E5654008251AA /* BasaleButton@2x.png in Resources */,
@@ -803,8 +833,10 @@
 				A973B73C175E57A2008251AA /* PreprandialeButton@2x.png in Resources */,
 				A973B744175E57AF008251AA /* PostprandialeButton.png in Resources */,
 				A973B748175E57AF008251AA /* PostprandialeButton@2x.png in Resources */,
+				A92B715E176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */,
 				A973B74C175E57AF008251AA /* VerginButton.png in Resources */,
 				A973B750175E57AF008251AA /* VerginButton@2x.png in Resources */,
+				A92B715A176FC23600C0FA68 /* ButtonCalcola.png in Resources */,
 				A973B757175E769E008251AA /* OvalNero@2x.png in Resources */,
 				A973B75B175E769E008251AA /* OvalNero.png in Resources */,
 				A973B763175E78D2008251AA /* OvalBlue.png in Resources */,
@@ -826,12 +858,14 @@
 				A951675C175795F40058E5B4 /* Default-568h@2x.png in Resources */,
 				A951675D175795F40058E5B4 /* MainStoryboard.storyboard in Resources */,
 				A951675E175795F40058E5B4 /* first.png in Resources */,
+				A92B7165176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */,
 				A951675F175795F40058E5B4 /* first@2x.png in Resources */,
 				A9516760175795F40058E5B4 /* second.png in Resources */,
 				A9516761175795F40058E5B4 /* second@2x.png in Resources */,
 				A9412617175B87B500ED8FF6 /* B_Prepardiale.png in Resources */,
 				A941261B175B87B500ED8FF6 /* B_Prepardiale@2x.png in Resources */,
 				A9412621175B888700ED8FF6 /* Botton1@2x.png in Resources */,
+				A92B7169176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */,
 				A9412625175B888700ED8FF6 /* Botton1.png in Resources */,
 				A973B72F175E5654008251AA /* BasaleButton.png in Resources */,
 				A973B733175E5654008251AA /* BasaleButton@2x.png in Resources */,
@@ -839,8 +873,10 @@
 				A973B73D175E57A2008251AA /* PreprandialeButton@2x.png in Resources */,
 				A973B745175E57AF008251AA /* PostprandialeButton.png in Resources */,
 				A973B749175E57AF008251AA /* PostprandialeButton@2x.png in Resources */,
+				A92B715F176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */,
 				A973B74D175E57AF008251AA /* VerginButton.png in Resources */,
 				A973B751175E57AF008251AA /* VerginButton@2x.png in Resources */,
+				A92B715B176FC23600C0FA68 /* ButtonCalcola.png in Resources */,
 				A973B758175E769E008251AA /* OvalNero@2x.png in Resources */,
 				A973B75C175E769E008251AA /* OvalNero.png in Resources */,
 				A973B764175E78D2008251AA /* OvalBlue.png in Resources */,
@@ -862,12 +898,14 @@
 				A98036F717458D3100F808C3 /* Default-568h@2x.png in Resources */,
 				A98036FA17458D3100F808C3 /* MainStoryboard.storyboard in Resources */,
 				A98036FF17458D3100F808C3 /* first.png in Resources */,
+				A92B7162176FC3C700C0FA68 /* ButtonCalcolaV2@2x.png in Resources */,
 				A980370117458D3100F808C3 /* first@2x.png in Resources */,
 				A980370617458D3100F808C3 /* second.png in Resources */,
 				A980370817458D3100F808C3 /* second@2x.png in Resources */,
 				A9412614175B87B500ED8FF6 /* B_Prepardiale.png in Resources */,
 				A9412618175B87B500ED8FF6 /* B_Prepardiale@2x.png in Resources */,
 				A941261E175B888700ED8FF6 /* Botton1@2x.png in Resources */,
+				A92B7166176FC3C700C0FA68 /* ButtonCalcolaV2.png in Resources */,
 				A9412622175B888700ED8FF6 /* Botton1.png in Resources */,
 				A973B72C175E5654008251AA /* BasaleButton.png in Resources */,
 				A973B730175E5654008251AA /* BasaleButton@2x.png in Resources */,
@@ -875,8 +913,10 @@
 				A973B73A175E57A2008251AA /* PreprandialeButton@2x.png in Resources */,
 				A973B742175E57AF008251AA /* PostprandialeButton.png in Resources */,
 				A973B746175E57AF008251AA /* PostprandialeButton@2x.png in Resources */,
+				A92B715C176FC23600C0FA68 /* ButtonCalcola@2x.png in Resources */,
 				A973B74A175E57AF008251AA /* VerginButton.png in Resources */,
 				A973B74E175E57AF008251AA /* VerginButton@2x.png in Resources */,
+				A92B7158176FC23600C0FA68 /* ButtonCalcola.png in Resources */,
 				A973B755175E769E008251AA /* OvalNero@2x.png in Resources */,
 				A973B759175E769E008251AA /* OvalNero.png in Resources */,
 				A973B761175E78D2008251AA /* OvalBlue.png in Resources */,
